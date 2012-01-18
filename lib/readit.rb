@@ -1,5 +1,6 @@
 require "readit/version"
 require 'multi_json'
+require 'faraday'
 
 module Readit
 
@@ -13,7 +14,7 @@ module Readit
 
 		attr_reader :access_token
 
-		SITE_URL = 'https://www.readability.com/api/rest/v1'
+		SITE_URL = 'https://www.readability.com/'
 
 		# Retrieve the base API URI - information about subresources.
 		# /
@@ -40,7 +41,7 @@ module Readit
 				request(:get,"/bookmarks/#{args[:bookmark_id]}")
 			else
 				params = args.map{|k,v| "#{k}=#{v}"}.join('&')
-				request(:get,'/bookmarks',params)
+				request(:get,'/bookmarks',args)
 			end
 		end
 
@@ -90,21 +91,20 @@ module Readit
 		end
 
 		private 
-
 		def request(method,url,args={})
-			response = @client.send method,url,args
+			response = client.send(method,"/api/rest/v1#{url}",args.merge!(:access_token=>@access_token))
+			puts response.body
 			MultiJson.decode response
 		end
 
 		def client
-			@client ||= (Faraday.new(:url => SITE_URL) do |builder|
+			@client ||= (Faraday.new(:url => SITE_URL,:use_ssl=>true) do |builder|
 				# or, use shortcuts:
 				builder.request  :url_encoded
 				builder.response :logger
-				builder.adapter  :net_http
+				builder.adapter  Faraday.default_adapter
 			end)
 		end
 
 	end
-  # Your code goes here...
 end
