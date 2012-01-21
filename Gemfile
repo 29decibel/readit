@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 gem 'multi_json'
-gem 'faraday'
 
 group :development, :test do
 	gem 'rspec'

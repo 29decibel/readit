@@ -1,6 +1,5 @@
 require "readit/version"
 require 'multi_json'
-require 'faraday'
 require 'oauth'
 
 module Readit
