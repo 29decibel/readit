@@ -6,11 +6,32 @@ module Readit
 
 	class ReaditError < StandardError;end
 
+	module Config
+
+		def self.consumer_key
+			@@consumer_key
+		end
+
+		def self.consumer_key=(val)
+			@@consumer_key = val
+		end
+
+		def self.consumer_secret
+			@@consumer_secret
+		end
+
+		def self.consumer_secret=(val)
+			@@consumer_secret = val
+		end
+
+	end
+
 	class API
 		# Create a new Readit API client
 		def initialize(access_token='',access_token_secret='')
 			@access_token = access_token
 			@access_token_secret = access_token_secret
+			load_config
 		end
 
 		attr_reader :access_token
@@ -93,7 +114,7 @@ module Readit
 
 		private 
 		def request(method,url,args={})
-			consumer = ::OAuth::Consumer.new('lidongbin', 'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C',:site=>SITE_URL)
+			consumer = ::OAuth::Consumer.new(Readit::Config.consumer_key,Readit::Config.consumer_secret,:site=>SITE_URL)
 			atoken = ::OAuth::AccessToken.new(consumer, @access_token, @access_token_secret)
 			#response = client.send(method,"/api/rest/v1#{url}",args.merge!('oauth_token'=>@access_token,'oauth_token_secret'=>'5VEnMNPr7Q4393wxAYdnTWnpWwn7bHm4','oauth_consumer_key'=>'lidongbin','oauth_consumer_secret'=>'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C'))
 			puts url
@@ -110,6 +131,9 @@ module Readit
 		# 		builder.adapter  Faraday.default_adapter
 		# 	end)
 		# end
+		def load_config
+			
+		end
 
 	end
 end
