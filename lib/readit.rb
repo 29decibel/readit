@@ -1,6 +1,8 @@
 require "readit/version"
 require 'multi_json'
 require 'oauth'
+# plugin railtie hook when using rails
+require 'readit/railtie' if defined?(Rails)
 
 module Readit
 
@@ -73,7 +75,7 @@ module Readit
 		# /bookmarks?archive&favorite&domain&added_since&added_until&opened_since&opened_until&
 		# archived_since&archived_until&favorited_since&favorited_until&updated_since&updated_until&
 		# order&page&per_page&exclude_accessibility&only_deleted
-		def add_bookmark(url,args={})
+		def add_bookmark(args={})
 			request(:post,'/bookmarks',args)
 		end
 
@@ -119,7 +121,10 @@ module Readit
 			#response = client.send(method,"/api/rest/v1#{url}",args.merge!('oauth_token'=>@access_token,'oauth_token_secret'=>'5VEnMNPr7Q4393wxAYdnTWnpWwn7bHm4','oauth_consumer_key'=>'lidongbin','oauth_consumer_secret'=>'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C'))
 			puts url
 			response = atoken.send(method,"/api/rest/v1#{url}",args)
+			puts '-------------------------------'
+			puts response.inspect
 			puts response.body
+			puts '-------------------------------'
 			MultiJson.decode response.body
 		end
 
