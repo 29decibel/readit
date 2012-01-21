@@ -132,7 +132,9 @@ module Readit
 		# 	end)
 		# end
 		def load_config
-			
+ 			# config_file = YAML.load_file(File.join(Rails.root.to_s, 'config', 'readability.yml'))[Rails.env || "development"]
+      # Readit::Config.consumer_key = weibo_oauth["consumer_key"]
+      # Readit::Config.consumer_secret = weibo_oauth["consumer_secret"]
 		end
 
 	end
