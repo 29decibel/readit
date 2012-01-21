@@ -1,6 +1,7 @@
 require "readit/version"
 require 'multi_json'
 require 'faraday'
+require 'oauth'
 
 module Readit
 
@@ -8,8 +9,9 @@ module Readit
 
 	class API
 		# Create a new Readit API client
-		def initialize(access_token='')
+		def initialize(access_token='',access_token_secret='')
 			@access_token = access_token
+			@access_token_secret = access_token_secret
 		end
 
 		attr_reader :access_token
@@ -92,19 +94,23 @@ module Readit
 
 		private 
 		def request(method,url,args={})
-			response = client.send(method,"/api/rest/v1#{url}",args.merge!(:access_token=>@access_token))
+			consumer = ::OAuth::Consumer.new('lidongbin', 'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C',:site=>SITE_URL)
+			atoken = ::OAuth::AccessToken.new(consumer, @access_token, @access_token_secret)
+			#response = client.send(method,"/api/rest/v1#{url}",args.merge!('oauth_token'=>@access_token,'oauth_token_secret'=>'5VEnMNPr7Q4393wxAYdnTWnpWwn7bHm4','oauth_consumer_key'=>'lidongbin','oauth_consumer_secret'=>'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C'))
+			puts url
+			response = atoken.send(method,"/api/rest/v1#{url}",args)
 			puts response.body
-			MultiJson.decode response
+			MultiJson.decode response.body
 		end
 
-		def client
-			@client ||= (Faraday.new(:url => SITE_URL,:use_ssl=>true) do |builder|
-				# or, use shortcuts:
-				builder.request  :url_encoded
-				builder.response :logger
-				builder.adapter  Faraday.default_adapter
-			end)
-		end
+		# def client
+		# 	@client ||= (Faraday.new(:url => SITE_URL,:use_ssl=>true) do |builder|
+		# 		# or, use shortcuts:
+		# 		builder.request  :url_encoded
+		# 		builder.response :logger
+		# 		builder.adapter  Faraday.default_adapter
+		# 	end)
+		# end
 
 	end
 end
