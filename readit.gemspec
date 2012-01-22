@@ -10,6 +10,7 @@ Gem::Specification.new do |gem|
 
 	gem.rubyforge_project = "readit"
 	gem.add_dependency 'multi_json'
+	gem.add_dependency 'oauth'
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")

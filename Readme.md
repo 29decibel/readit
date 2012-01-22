@@ -1,5 +1,17 @@
-### Simple api client of [readability](http://www.readability.com)
+## Simple api client of [readability](http://www.readability.com)
 not ready to use
+
+### Installation
+```ruby
+
+gem install readit
+```
+or in your rails gemfile
+``` ruby
+
+gem 'readit'
+```
+
 ### Configuration
 #### Rails
 config/readability.yml
