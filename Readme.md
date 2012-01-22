@@ -7,6 +7,7 @@ not ready to use
 gem install readit
 ```
 or in your rails gemfile
+
 ``` ruby
 
 gem 'readit'
