@@ -11,23 +11,24 @@ describe "Readit::API" do
 	end
 
   it "should get user infos" do
-		#@api.me.should_not == nil
+		@api.me.should_not == nil
   end
 
 	it "should get user's bookmarks" do
-		#@api.bookmarks.should_not == nil
+		@api.bookmarks.should_not == nil
 	end
 
 	it "should add bookmark" do
-		# url = 'http://gigix.thoughtworkers.org/2012/1/16/why-should-you-start-career-from-professional-services'
-		# resp = @api.add_bookmark :url=>url
-		# puts resp.inspect
-		# resp.should_not == nil
+		url = 'http://www.mihuwa.com/article/5073/'
+		url = 'http://leewindy.blogbus.com/logs/188360549.html'
+		resp = @api.add_bookmark :url=>url
+		puts resp.inspect
+		resp.should_not == nil
 	end
 
 	it "should get the article content" do
 		article = @api.article 'eg60dxbv'
-		puts article
+		#puts article
 		article.should_not == nil
 	end
 

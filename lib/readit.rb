@@ -119,27 +119,12 @@ module Readit
 			consumer = ::OAuth::Consumer.new(Readit::Config.consumer_key,Readit::Config.consumer_secret,:site=>SITE_URL)
 			atoken = ::OAuth::AccessToken.new(consumer, @access_token, @access_token_secret)
 			#response = client.send(method,"/api/rest/v1#{url}",args.merge!('oauth_token'=>@access_token,'oauth_token_secret'=>'5VEnMNPr7Q4393wxAYdnTWnpWwn7bHm4','oauth_consumer_key'=>'lidongbin','oauth_consumer_secret'=>'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C'))
-			puts url
 			response = atoken.send(method,"/api/rest/v1#{url}",args)
-			puts '-------------------------------'
-			puts response.inspect
-			puts response.body
-			puts '-------------------------------'
-			MultiJson.decode response.body
-		end
-
-		# def client
-		# 	@client ||= (Faraday.new(:url => SITE_URL,:use_ssl=>true) do |builder|
-		# 		# or, use shortcuts:
-		# 		builder.request  :url_encoded
-		# 		builder.response :logger
-		# 		builder.adapter  Faraday.default_adapter
-		# 	end)
-		# end
-		def load_config
- 			# config_file = YAML.load_file(File.join(Rails.root.to_s, 'config', 'readability.yml'))[Rails.env || "development"]
-      # Readit::Config.consumer_key = weibo_oauth["consumer_key"]
-      # Readit::Config.consumer_secret = weibo_oauth["consumer_secret"]
+			if response.body==nil or response.body==''
+				{:status => response.code}
+			else
+				MultiJson.decode response.body
+			end
 		end
 
 	end
