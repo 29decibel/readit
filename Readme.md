@@ -24,7 +24,7 @@ development:
 	consumer_secret: some_secret
 ```
 
-#### or in your code
+or in your code
 
 ``` ruby
 
