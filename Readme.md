@@ -9,7 +9,6 @@ config/readability.yml
 development:
 	consumer_key: some_key
 	consumer_secret: some_secret
-
 ```
 
 #### or in your code
@@ -18,7 +17,6 @@ development:
 
 Readit::Config.consumer_key = some_key
 Readit::Config.consumer_secret = some_value
-
 ```
 
 ### API use
@@ -28,15 +26,11 @@ Readit::Config.consumer_secret = some_value
 
 # get user info
 @api.me
-
 # get all bookmarks
 @api.bookmarks
-
 # get one artile by article_id
 @api.article 'article_id'
-
 # add bookmark
 @api.add_bookmark :url=>'http://some_article_url.html'
-
 ```
 
