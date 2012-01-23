@@ -33,7 +33,6 @@ module Readit
 		def initialize(access_token='',access_token_secret='')
 			@access_token = access_token
 			@access_token_secret = access_token_secret
-			load_config
 		end
 
 		attr_reader :access_token
