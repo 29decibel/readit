@@ -64,7 +64,7 @@ module Readit
 				request(:get,"/bookmarks/#{args[:bookmark_id]}")
 			else
 				params = args.map{|k,v| "#{k}=#{v}"}.join('&')
-				request(:get,'/bookmarks',args)
+				request(:get,'/bookmarks',args)['bookmarks']
 			end
 		end
 
