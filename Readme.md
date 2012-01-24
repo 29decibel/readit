@@ -5,14 +5,14 @@ not ready to use
 ```ruby
 
 gem install readit
-# latest (recommend)
-gem 'readit',:git=>'git@github.com:29decibel/readit.git'
 ```
 or in your rails gemfile
 
 ``` ruby
 
 gem 'readit'
+# or latest (recommend)
+gem 'readit',:git=>'git@github.com:29decibel/readit.git'
 ```
 
 ### Configuration
