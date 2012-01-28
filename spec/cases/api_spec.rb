@@ -4,10 +4,17 @@ describe "Readit::API" do
 	before do
 		# load consumer infos
     consumer_info = YAML.load_file(File.join(File.dirname(__FILE__),'../readability.yml'))["development"]
-		puts consumer_info
 		Readit::Config.consumer_key = consumer_info['consumer_key']
 		Readit::Config.consumer_secret = consumer_info['consumer_secret']
 		@api = Readit::API.new 'zQuzAzVW4Ark7VZvm2','5VEnMNPr7Q4393wxAYdnTWnpWwn7bHm4'
+	end
+
+	let :bookmarks do
+		@bms ||= @api.bookmarks
+	end
+
+	let :bookmark_ids do
+		bookmarks.map{|a| a['id']}
 	end
 
   it "should get user infos" do
@@ -15,13 +22,13 @@ describe "Readit::API" do
   end
 
 	it "should get user's bookmarks" do
-		@api.bookmarks.should_not == nil
+		bookmarks.should_not == nil
+		bookmarks.count.should > 0
 	end
 
 	it "should add bookmark" do
-		url = 'http://www.mihuwa.com/article/5073/'
-		url = 'http://leewindy.blogbus.com/logs/188360549.html'
-		resp = @api.add_bookmark :url=>url
+		url = 'http://www.tripadvisor.com/Restaurant_Review-g297701-d1182615-Reviews-Cafe_Lotus-Ubud_Bali.html'
+		resp = @api.bookmark :url=>url
 		puts resp.inspect
 		resp.should_not == nil
 	end
@@ -31,6 +38,27 @@ describe "Readit::API" do
 		#puts article
 		article.should_not == nil
 	end
+
+	it "should get the bookmark info by bookmark id" do
+		bookmark = @api.bookmarks :bookmark_id=>bookmark_ids.first
+		bookmark.should_not == nil
+		puts bookmark
+	end
+
+	it "should update bookmark to favarite" do
+		bm_id = bookmark_ids.first
+		@api.favorite bm_id
+		bookmark = @api.bookmarks :bookmark_id=>bm_id
+		bookmark['favorite'].should == true
+	end
+
+	it "should update bookmark to archive" do
+		bm_id = bookmark_ids.first
+		@api.archive bm_id
+		bookmark = @api.bookmarks :bookmark_id=>bm_id
+		bookmark['archive'].should == true
+	end
+
 
 end
 

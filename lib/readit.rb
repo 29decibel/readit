@@ -31,6 +31,12 @@ module Readit
 	class API
 		# Create a new Readit API client
 		def initialize(access_token='',access_token_secret='')
+			if access_token == '' or access_token_secret == ''
+				raise ReaditError.new('have to provide access_token and access_token_secret')
+			end
+			if Readit::Config.consumer_key=='' or Readit::Config.consumer_secret==''
+				raise ReaditError.new('please set Readit::Config.consumer_key or Readit::Config.consumer_secret first')
+			end
 			@access_token = access_token
 			@access_token_secret = access_token_secret
 		end
@@ -54,9 +60,25 @@ module Readit
 		# Retrieve the bookmarks collection. Automatically filtered to the current user.
 		# bookmark_id support
 		#
-		# /bookmarks?archive&favorite&domain&added_since&added_until&opened_since&opened_until&
-		# archived_since&archived_until&favorited_since&favorited_until&updated_since&updated_until&
-		# order&page&per_page&exclude_accessibility&only_deleted
+		# /bookmarks?
+		# archive
+		# favorite
+		# domain
+		# added_since
+		# added_until&
+		# opened_since
+		# opened_until&
+		# archived_since&
+		# archived_until&
+		# favorited_since&
+		# favorited_until&
+		# updated_since&
+		# updated_until&
+		# order&
+		# page&
+		# per_page&
+		# exclude_accessibility&
+		# only_deleted
 		#
 		# /bookmarks/{bookmark_id}
 		def bookmarks(args={})
@@ -71,21 +93,28 @@ module Readit
 		# Add a bookmark. Returns 202 Accepted, meaning that the bookmark has been added but no guarantees are made as 
 		# to whether the article proper has yet been parsed.
 		#
-		# /bookmarks?archive&favorite&domain&added_since&added_until&opened_since&opened_until&
-		# archived_since&archived_until&favorited_since&favorited_until&updated_since&updated_until&
-		# order&page&per_page&exclude_accessibility&only_deleted
-		def add_bookmark(args={})
+		# favorite 0 or 1
+		# archive 0 or 1
+		def bookmark(args={})
 			request(:post,'/bookmarks',args)
 		end
 
 		# Update a bookmark. Returns 200 on successful update.
 		# /bookmarks/{bookmark_id}
+		# favorite 0 or 1
+		# archive 0 or 1
 		def update_bookmark(bookmark_id,args={})
 			request(:post,"/bookmarks/#{bookmark_id}",args)
 		end
 
+		# archive a bookmark by id
 		def archive(bookmark_id)
 			update_bookmark(bookmark_id,:archive=>1)
+		end
+
+		# favorite a bookmark by id
+		def favorite(bookmark_id)
+			update_bookmark(bookmark_id,:favorite=>1)
 		end
 
 		# Remove a single bookmark from this user's history. 
