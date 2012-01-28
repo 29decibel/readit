@@ -41,11 +41,13 @@ Readit::Config.consumer_secret = some_value
 
 # get user info
 @api.me
-# get all bookmarks
+# get all bookmarks, result will be a hash array
 @api.bookmarks
 # get one artile by article_id
 @api.article 'article_id'
 # add bookmark
-@api.add_bookmark :url=>'http://some_article_url.html'
+@api.bookmark :url=>'http://some_article_url.html'
+# get bookmark by bookmark_id
+@api.bookmarks :bookmark_id => some_bookmark_id
 ```
 
