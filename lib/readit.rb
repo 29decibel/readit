@@ -78,7 +78,7 @@ module Readit
 		# updated_until
 		# order
 		# page
-		# per_page
+		# per_page default 20,max 50
 		# exclude_accessibility
 		# only_deleted
 		def bookmarks(args={})

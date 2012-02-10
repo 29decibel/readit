@@ -6,8 +6,12 @@ module Readit
 				if consumer_info
         	Readit::Config.consumer_key = consumer_info["consumer_key"]
         	Readit::Config.consumer_secret = consumer_info["consumer_secret"]
+				else
+					Rails.logger.warn "Please check your config/readability.yml file, no consumer_key and consumer_sercret under #{Rails.env} found"
 				end
-      end
+			else
+				Rails.logger.warn "Please provide consumer_key and consumer_sercret on config/readability.yml file"
+			end
     end
   end
 end
