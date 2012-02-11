@@ -1,6 +1,7 @@
 require "readit/version"
 require 'multi_json'
 require 'oauth'
+require 'uri'
 # plugin railtie hook when using rails
 require 'readit/railtie' if defined?(Rails)
 
@@ -86,7 +87,7 @@ module Readit
 				request(:get,"/bookmarks/#{args[:bookmark_id]}")
 			else
 				params = args.map{|k,v| "#{k}=#{v}"}.join('&')
-				request(:get,'/bookmarks',args)['bookmarks']
+				request(:get,"/bookmarks?#{URI.escape(params)}")['bookmarks']
 			end
 		end
 

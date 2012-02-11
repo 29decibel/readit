@@ -45,6 +45,12 @@ describe "Readit::API" do
 		puts bookmark
 	end
 
+	it "should get bookmarks according to added since" do
+		bookmarks = @api.bookmarks({:added_until=>'2012-1-1',:per_page=>2})
+		puts bookmarks
+		bookmarks.count.should > 0
+	end
+
 	it "should update bookmark to favarite" do
 		bm_id = bookmark_ids.first
 		@api.favorite bm_id
