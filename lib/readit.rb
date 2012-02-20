@@ -2,6 +2,7 @@ require "readit/version"
 require 'multi_json'
 require 'oauth'
 require 'uri'
+require 'hashie'
 # plugin railtie hook when using rails
 require 'readit/railtie' if defined?(Rails)
 
@@ -87,7 +88,7 @@ module Readit
 				request(:get,"/bookmarks/#{args[:bookmark_id]}")
 			else
 				params = args.map{|k,v| "#{k}=#{v}"}.join('&')
-				request(:get,"/bookmarks?#{URI.escape(params)}")['bookmarks']
+				request(:get,"/bookmarks?#{URI.escape(params)}").bookmarks
 			end
 		end
 
@@ -155,9 +156,9 @@ module Readit
 			#response = client.send(method,"/api/rest/v1#{url}",args.merge!('oauth_token'=>@access_token,'oauth_token_secret'=>'5VEnMNPr7Q4393wxAYdnTWnpWwn7bHm4','oauth_consumer_key'=>'lidongbin','oauth_consumer_secret'=>'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C'))
 			response = atoken.send(method,"/api/rest/v1#{url}",args)
 			if response.body==nil or response.body==''
-				{:status => response.code}
+				Hashie::Mash.new({:status => response.code})
 			else
-				MultiJson.decode response.body
+				Hashie::Mash.new MultiJson.decode(response.body)
 			end
 		end
 
