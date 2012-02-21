@@ -22,8 +22,8 @@ config/readability.yml
 ``` ruby
 
 development:
-	consumer_key: some_key
-	consumer_secret: some_secret
+  consumer_key: some_key
+  consumer_secret: some_secret
 ```
 
 or in your code
