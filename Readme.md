@@ -1,5 +1,4 @@
 ## Simple api client of [readability](http://www.readability.com)
-not ready to use
 
 ### Installation
 ```ruby
@@ -34,7 +33,7 @@ Readit::Config.consumer_key = some_key
 Readit::Config.consumer_secret = some_value
 ```
 
-### API use
+### API usage
 ``` ruby 
 
 @api = Readit::API.new 'access_token','access_token_secret'
