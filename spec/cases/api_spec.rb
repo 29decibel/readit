@@ -45,7 +45,7 @@ describe "Readit::API" do
   end
 
   it "should get bookmarks according to added since" do
-    bookmarks = @api.bookmarks({:added_until=>'2012-1-1',:per_page=>2})
+    bookmarks = @api.bookmarks(:added_until=>'2012-1-1',:per_page=>2)
     bookmarks.count.should > 0
     bookmarks.select{|b| Time.parse(b.date_added) > Time.parse('2012-1-1')}.count.should == 0
   end
