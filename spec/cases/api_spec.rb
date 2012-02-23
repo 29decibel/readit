@@ -64,6 +64,10 @@ describe "Readit::API" do
     bookmark.should be_archive
   end
 
+  it "should raise exception when call bookmark without url provide" do
+    lambda { @api.bookmark }.should raise_error
+  end
+
 
 end
 

@@ -99,6 +99,7 @@ module Readit
     # favorite 0 or 1
     # archive 0 or 1
     def bookmark(args={})
+      raise ReaditError.new('expect at lease a hash argument with key :url') unless args[:url]
       request(:post,'/bookmarks',args)
     end
 
