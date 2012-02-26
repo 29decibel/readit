@@ -72,5 +72,5 @@ Readit::Config.consumer_secret = some_value
 ```
 
 ### At last but not least
->Welcome to any contributions !
+>Contributions are welcome!
 
