@@ -51,14 +51,22 @@ Readit::Config.consumer_secret = some_value
 ```ruby
 # get all bookmarks, result will be a hash array
 @api.bookmarks
+
 # add bookmark
-@api.bookmark :url=>'http://some_article_url.html'
+bookmark_info = @api.bookmark(:url=>'http://some_article_url.html')
+# check bookmarked infos
+# bookmark_info.bookmark_id
+# bookmark_info.article_id
+
 # get bookmark by bookmark_id
 @api.bookmarks :bookmark_id => some_bookmark_id
+
 # archive a bookmark
 @api.archive some_bookmark_id
+
 # favorite a bookmark
 @api.favorite some_bookmark_id
+
 # or you can just call update_bookmark to 
 # update a bookmark to favorited or archived
 @api.update_bookmark bookmark_id,:favorite => 1,:archive => 0

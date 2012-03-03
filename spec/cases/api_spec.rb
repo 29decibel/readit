@@ -33,6 +33,14 @@ describe "Readit::API" do
     resp.should_not == nil
   end
 
+  it "can get bookmark location when bookmarked a url" do
+    url = 'http://www.jslib.org.cn/njlib_xsyj/201011/t20101130_98154.htm'
+    resp = @api.bookmark :url => url
+    puts resp.inspect
+    resp.bookmark_id.should_not be_nil
+    resp.article_id.should_not be_nil
+  end
+
   it "should get the article content" do
     article = @api.article 'eg60dxbv'
     #puts article

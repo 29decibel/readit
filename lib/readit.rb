@@ -98,9 +98,19 @@ module Readit
     # url the address to bookmark
     # favorite 0 or 1
     # archive 0 or 1
+    # Return example
+    # success:
+    # {:status => '202',:bookmark_id => '233444', :article_id => 't323r2'}
+    # conflicts
+    # {:status => '409'}
     def bookmark(args={})
       raise ReaditError.new('expect at lease a hash argument with key :url') unless args[:url]
-      request(:post,'/bookmarks',args)
+      request(:post,'/bookmarks',args) do |response|
+        Hashie::Mash.new({
+          :status =>response.code,
+          :bookmark_id=> response.code == '202' ? response["Location"].match(/bookmarks\/(.*)/)[1] : '',
+          :article_id=> response.code== '202' ? response["X-Article-Location"].match(/articles\/(.*)/)[1] : ''})
+      end
     end
 
     # Update a bookmark. Returns 200 on successful update.
@@ -156,6 +166,14 @@ module Readit
       atoken = ::OAuth::AccessToken.new(consumer, @access_token, @access_token_secret)
       #response = client.send(method,"/api/rest/v1#{url}",args.merge!('oauth_token'=>@access_token,'oauth_token_secret'=>'5VEnMNPr7Q4393wxAYdnTWnpWwn7bHm4','oauth_consumer_key'=>'lidongbin','oauth_consumer_secret'=>'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C'))
       response = atoken.send(method,"/api/rest/v1#{url}",args)
+      if block_given?
+        yield response
+      else
+        hashie_response(response)
+      end
+    end
+
+    def hashie_response(response)
       if response.body==nil or response.body==''
         Hashie::Mash.new({:status => response.code})
       else
