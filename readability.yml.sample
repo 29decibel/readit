@@ -1,3 +1,6 @@
 development:
 	consumer_key: consumer_key
 	consumer_secret: consumer_secret
+  # you can get such informations from omniauth-readability
+  oauth_token: oauth_token
+  oauth_token_secret: oauth_token_secret
