@@ -1,0 +1,350 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.readability.com/api/rest/v1/bookmarks?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - OAuth gem v0.4.5
+      Authorization:
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="w8Fg9FoUFcu3zvPtSMwBXgC4MNqXWWzBqiXsKcC7hU",
+        oauth_signature="wGv0TYaZQHepd8UGolFstJvGjXA%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1334276907", oauth_token="<TOKENS>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 Apr 2012 00:28:29 GMT
+      P3p:
+      - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
+      Server:
+      - nginx/0.7.65
+      Set-Cookie:
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Fri, 11-May-2012
+        00:28:29 GMT; Max-Age=2419200; Path=/
+      Vary:
+      - Authorization,Cookie
+      Content-Length:
+      - '24397'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: ! "{\n    \"bookmarks\": [\n        {\n            \"user_id\": 24591,\n
+        \           \"read_percent\": \"0.00\",\n            \"date_updated\": \"2012-04-12
+        20:20:16\",\n            \"favorite\": true,\n            \"id\": 7616262,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"37signals.com\",\n
+        \               \"title\": \"Testing like the TSA\",\n                \"url\":
+        \"http://37signals.com/svn/posts/3159-testing-like-the-tsa\",\n                \"author\":
+        \"David\",\n                \"excerpt\": \"When developers first discover
+        the wonders of test-driven development, it&#x2019;s like gaining entrance
+        to a new and better world with less stress and insecurity. It truly is a wonderful
+        experience&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        711,\n                \"date_published\": null,\n                \"processed\":
+        true,\n                \"id\": \"ueeebier\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/ueeebier\",\n            \"date_favorited\": \"2012-04-12
+        19:11:03\",\n            \"date_added\": \"2012-04-11 22:36:19\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-04-11 03:24:19\",\n            \"favorite\":
+        false,\n            \"id\": 7536888,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.codinghorror.com\",\n                \"title\": \"Books: Bits vs. Atoms\",\n
+        \               \"url\": \"http://www.codinghorror.com/blog/2012/04/books-bits-vs-atoms.html\",\n
+        \               \"author\": \"Jeff Atwood\",\n                \"excerpt\":
+        \"&#13; &#13; &#13; &#13; &#13; &#13; &#13; I adore words, but let's face
+        it: books suck.&#13; &#13; &#13; More specifically, so many beautiful ideas
+        have been helplessly trapped in physical&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 2023,\n                \"date_published\":
+        null,\n                \"processed\": true,\n                \"id\": \"msdmfjsm\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/msdmfjsm\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-11
+        03:24:19\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-07 23:37:49\",\n            \"favorite\": false,\n            \"id\":
+        7261727,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"yehudakatz.com\",\n
+        \               \"title\": \"Understanding JavaScript Function Invocation
+        and “this” « Katz Got Your Tongue?\",\n                \"url\": \"http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Understanding
+        JavaScript Function Invocation and this August 11th, 2011 Over the years,
+        I ve seen a lot of confusion about JavaScript function invocation. In particular,
+        a lot of people have&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 1328,\n                \"date_published\":
+        \"2011-08-11 00:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"cuk6alsj\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/cuk6alsj\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-07
+        23:37:49\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-07 23:34:12\",\n            \"favorite\": false,\n            \"id\":
+        7261528,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"yehudakatz.com\",\n
+        \               \"title\": \"Understanding “Prototypes” in JavaScript « Katz
+        Got Your Tongue?\",\n                \"url\": \"http://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Understanding
+        Prototypes in JavaScript August 12th, 2011 For the purposes of this post,
+        I will be talking about JavaScript objects using syntax defined in ECMAScript
+        5.1. The basic semantics existed&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1822,\n                \"date_published\":
+        \"2011-08-12 00:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"btoj92hc\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/btoj92hc\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-07
+        23:34:12\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-07 02:25:02\",\n            \"favorite\": false,\n            \"id\":
+        7203170,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"www.websanova.com\",\n
+        \               \"title\": \"Extending JavaScript – The Right Way\",\n                \"url\":
+        \"http://www.websanova.com/tutorials/javascript/extending-javascript-the-right-way?utm_source=javascriptweekly&utm_medium=email\",\n
+        \               \"author\": null,\n                \"excerpt\": \"JavaScript
+        comes with a lot of great functionality built in, but what if there is a function
+        you need which is missing. How can we build them in seaminglessly in an elegant
+        way that extends the&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 718,\n                \"date_published\":
+        \"2012-04-03 00:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"9nha7mjx\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/9nha7mjx\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-07
+        02:25:01\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-07 02:16:05\",\n            \"favorite\": false,\n            \"id\":
+        7202843,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"nearthespeedoflight.com\",\n
+        \               \"title\": \"The Elements of Programmatic Style\",\n                \"url\":
+        \"http://nearthespeedoflight.com/style/guide?utm_source=iOS+Dev+Weekly&utm_campaign=6e57f704e6-iOS_Dev_Weekly_Issue_364_6_2012&utm_medium=email\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Introduction
+        The purpose of this guide is to ensure existing and future iOS and Mac products
+        conform to a consistent and well-designed convention. This will make applications
+        easier to build and&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 3437,\n                \"date_published\":
+        null,\n                \"processed\": true,\n                \"id\": \"e0lcol9x\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/e0lcol9x\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-07
+        02:16:04\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-07 02:02:26\",\n            \"favorite\": false,\n            \"id\":
+        7202280,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"www.papermill.me\",\n
+        \               \"title\": \"Papermill\",\n                \"url\": \"http://www.papermill.me/firstweeks/?utm_source=iOS+Dev+Weekly&utm_campaign=6e57f704e6-iOS_Dev_Weekly_Issue_364_6_2012&utm_medium=email\",\n
+        \               \"author\": null,\n                \"excerpt\": \"The first
+        few weeks This is an attempt to catalogue and analyse the first few weeks
+        of Papermill, an Instapaper client for Android that I developed with the help
+        of Matt Legaspi, a designer and&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1750,\n                \"date_published\":
+        \"2012-03-29 00:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"exg4hh7d\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/exg4hh7d\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-07
+        02:02:24\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-07 01:59:53\",\n            \"favorite\": false,\n            \"id\":
+        7202187,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"manuel.kiessling.net\",\n
+        \               \"title\": \"Object-orientation and inheritance in JavaScript\",\n
+        \               \"url\": \"http://manuel.kiessling.net/2012/03/23/object-orientation-and-inheritance-in-javascript-a-comprehensive-explanation/?utm_source=javascriptweekly&utm_medium=email\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Let&#8217;s
+        talk about object-orientation and inheritance in JavaScript. The good news
+        is that it&#8217;s actually quite simple, but the bad news is that it works
+        completely different than&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 2639,\n                \"date_published\":
+        \"2012-03-23 00:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"fppnnwg6\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/fppnnwg6\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-07
+        01:59:53\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-06 23:46:50\",\n            \"favorite\": false,\n            \"id\":
+        7197135,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"petdance.com\",\n
+        \               \"title\": \"The nameless “they” and the Facebook & job interview
+        trend that isn’t a trend\",\n                \"url\": \"http://petdance.com/2012/04/the-nameless-they-and-the-facebook-job-interview-trend-that-isnt-a-trend/\",\n
+        \               \"author\": \"Andy\",\n                \"excerpt\": \"&#8220;I&#8217;m
+        never eating there again,&#8221; he told me. &#8220;You know what they do?&#8221;
+        I was standing around at a party twenty years ago, and conversation got around
+        to what our first&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        962,\n                \"date_published\": \"2012-04-06 00:00:00\",\n                \"processed\":
+        true,\n                \"id\": \"momywaxu\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/momywaxu\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-04-06 23:46:50\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-04-05 19:36:22\",\n            \"favorite\":
+        false,\n            \"id\": 7099172,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.webdesignerdepot.com\",\n                \"title\": \"How to make more
+        as a freelancer\",\n                \"url\": \"http://www.webdesignerdepot.com/2012/04/how-to-make-more-as-a-freelancer/\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Do what
+        you love. That&#8217;s what the career counselors tell you when you are young.
+        That is what your parents pretend to instill on you when you are born. What
+        they forgot to mention is that very&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1398,\n                \"date_published\":
+        null,\n                \"processed\": true,\n                \"id\": \"n2d0ybeb\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/n2d0ybeb\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-05
+        19:36:22\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-05 00:43:44\",\n            \"favorite\": false,\n            \"id\":
+        7018631,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"www.sagarganatra.com\",\n
+        \               \"title\": \"Content flow in CSS3 regions\",\n                \"url\":
+        \"http://www.sagarganatra.com/2012/04/content-flow-in-css3-regions.html?utm_source=html5weekly&utm_medium=email\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Today I
+        was reading about CSS3 and I stumbled upon CSS3 regions. I was completely
+        flabbergasted with what I saw and learnt today. Imagine that you&#8217;re
+        trying to build a website for a magazine&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 590,\n                \"date_published\":
+        \"2012-04-02 00:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"ih1zcq8b\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/ih1zcq8b\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-05
+        00:43:13\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-04 19:08:23\",\n            \"favorite\": false,\n            \"id\":
+        6998456,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"avichal.wordpress.com\",\n
+        \               \"title\": \"Cultural Competence « Avichal's Blog\",\n                \"url\":
+        \"http://avichal.wordpress.com/2012/04/04/cultural-competence/\",\n                \"author\":
+        null,\n                \"excerpt\": \"avichal What is Cultural Competence?
+        Core competence is a factor that cannot be easily replicated and gives the
+        business a competitive advantage in delivering their product or service to
+        customers.&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        1521,\n                \"date_published\": \"2012-04-04 00:00:00\",\n                \"processed\":
+        true,\n                \"id\": \"1woey9hb\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/1woey9hb\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-04-04 19:08:23\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-04-04 19:04:50\",\n            \"favorite\":
+        false,\n            \"id\": 6998243,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.theatlantic.com\",\n                \"title\": \"A Privacy Manifesto
+        in Code: What If Your Emails Never Went to Gmail and Twitter Couldn't See
+        Your Tweets?\",\n                \"url\": \"http://www.theatlantic.com/technology/archive/2012/04/a-privacy-manifesto-in-code-what-if-your-emails-never-went-to-gmail-and-facebook-couldnt-see-your-status-updates/255414/\",\n
+        \               \"author\": \"Alexis Madrigal\",\n                \"excerpt\":
+        \"A new tool under development by Oregon State computer scientists could radically
+        alter the way that communications work on the web. Privly is a sort of manifesto-in-code,
+        a working argument for a&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 788,\n                \"date_published\":
+        null,\n                \"processed\": true,\n                \"id\": \"0ltadxsu\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/0ltadxsu\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-04
+        19:04:50\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-04 19:03:54\",\n            \"favorite\": false,\n            \"id\":
+        6998181,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"corner.squareup.com\",\n
+        \               \"title\": \"Building responsive analytics\",\n                \"url\":
+        \"http://corner.squareup.com/2012/04/building-analytics.html\",\n                \"author\":
+        null,\n                \"excerpt\": \"April 04, 2012 A few months back, as
+        we sat down to think about how Square was going to transform the over-the-counter
+        experience with Register 1.0, we also realized that we wanted to augment our&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 919,\n
+        \               \"date_published\": null,\n                \"processed\":
+        true,\n                \"id\": \"qcrezsyn\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/qcrezsyn\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-04-04 19:03:54\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-04-04 19:00:06\",\n            \"favorite\":
+        false,\n            \"id\": 6997916,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.perl.com\",\n                \"title\": \"Programming is Hard, Let's
+        Go Scripting...\",\n                \"url\": \"http://www.perl.com/pub/2007/12/06/soto-11.html?page=1\",\n
+        \               \"author\": \"Larry Wall\",\n                \"excerpt\":
+        \"I think, to most people, scripting is a lot like obscenity. I can't define
+        it, but I'll know it when I see it. Here are some common memes floating around:
+        Simple language \\\"Everything is a string\\\"&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 5462,\n                \"date_published\":
+        \"2007-12-06 08:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"yp5gbitv\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/yp5gbitv\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-04
+        19:00:06\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-04 18:59:46\",\n            \"favorite\": false,\n            \"id\":
+        6997891,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"openmymind.net\",\n
+        \               \"title\": \"You Really Should Log Client-Side Errors\",\n
+        \               \"url\": \"http://openmymind.net/2012/4/4/You-Really-Should-Log-Client-Side-Error/\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Let's keep
+        this short. Too few websites log JavaScript errors. To me, this seems unacceptable.
+        It either means you don't care or you think your code doesn't have errors.
+        Or both. Let's build a simple&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 445,\n                \"date_published\":
+        null,\n                \"processed\": true,\n                \"id\": \"pyb2tx49\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/pyb2tx49\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-04
+        18:59:46\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-04 18:57:58\",\n            \"favorite\": false,\n            \"id\":
+        6997807,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"merbist.com\",\n
+        \               \"title\": \"Merbist\",\n                \"url\": \"http://merbist.com/2012/04/04/building-and-implementing-a-single-sign-on-solution/\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Most modern
+        web applications start as a monolithic code base and, as complexity increases,
+        the once small app gets split appart into many &#8220;modules&#8221;. In other
+        cases, engineers opt for a&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 2472,\n                \"date_published\":
+        \"2012-04-04 00:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"p0omlrr8\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/p0omlrr8\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-04
+        18:57:58\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-04 01:57:52\",\n            \"favorite\": false,\n            \"id\":
+        6922281,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"danshipper.com\",\n
+        \               \"title\": \"I'm Sure It Will Only Take You A Few Days To
+        Code\",\n                \"url\": \"http://danshipper.com/non-technical-people-cant-estimate-developmen\",\n
+        \               \"author\": null,\n                \"excerpt\": \"&#8220;So
+        the site&#8217;s pretty simple, all it needs to do is X, Y and Z. You seem
+        like a good programmer so I&#8217;m sure it will only take you a few days
+        to put it together.&#8221; I get emails&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 870,\n                \"date_published\":
+        null,\n                \"processed\": true,\n                \"id\": \"p9rrnduu\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/p9rrnduu\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-04
+        01:57:52\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-03 19:59:34\",\n            \"favorite\": false,\n            \"id\":
+        6899254,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"rubysource.com\",\n
+        \               \"title\": \"Happenings in Ruby\",\n                \"url\":
+        \"http://rubysource.com/happenings-in-ruby-3/?utm_medium=email&utm_campaign=RubySource+3rd+April&utm_content=RubySource+3rd+April+CID_29d66d58498d41d09092a4ead0696666&utm_source=Newsletter&utm_term=Happenings+in+Ruby\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Hullo, and
+        welcome to yet another Happenings in Ruby, the series that takes a look around
+        the community and says &#8220;Hi, um, what&#8217;s going on?&#8221; &#160;Let&#8217;s
+        get to it.A Black-Tie&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 525,\n                \"date_published\":
+        null,\n                \"processed\": true,\n                \"id\": \"behifbka\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/behifbka\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-03
+        19:46:26\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-03 19:44:55\",\n            \"favorite\": false,\n            \"id\":
+        6899151,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"www.jorgecastro.org\",\n
+        \               \"title\": \"Why the Juju Charm Store Will Change the Way
+        You Use Ubuntu Server\",\n                \"url\": \"http://www.jorgecastro.org/2012/04/03/the-juju-charm-store-will-change-the-way-you-use-ubuntu-server/\",\n
+        \               \"author\": \"Jorge O. Castro\",\n                \"excerpt\":
+        \"Yikes, quite a statement! For the past 6 months we&#8217;ve been travelling
+        around conferences talking about juju and charms. We&#8217;ve had charm schools
+        and training events, but it&#8217;s been&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1808,\n                \"date_published\":
+        \"2012-04-03 00:00:00\",\n                \"processed\": true,\n                \"id\":
+        \"zh4ecyuo\"\n            },\n            \"article_href\": \"/api/rest/v1/articles/zh4ecyuo\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-03
+        19:44:55\",\n            \"archive\": true\n        }\n    ],\n    \"meta\":
+        {\n        \"num_pages\": 32,\n        \"page\": 1,\n        \"item_count_total\":
+        633,\n        \"item_count\": 20\n    },\n    \"conditions\": {\n        \"opened_since\":
+        null,\n        \"favorited_since\": null,\n        \"domain\": \"\",\n        \"updated_until\":
+        null,\n        \"exclude_accessibility\": \"\",\n        \"archived_until\":
+        null,\n        \"favorite\": null,\n        \"opened_until\": null,\n        \"archived_since\":
+        null,\n        \"added_until\": null,\n        \"updated_since\": null,\n
+        \       \"user\": \"<TOKENS>\",\n        \"per_page\": 20,\n        \"favorited_until\":
+        null,\n        \"order\": \"-date_added\",\n        \"only_deleted\": null,\n
+        \       \"archive\": null,\n        \"added_since\": null,\n        \"page\":
+        1\n    }\n}"
+    http_version: !!null 
+  recorded_at: Fri, 13 Apr 2012 00:28:29 GMT
+recorded_with: VCR 2.0.1

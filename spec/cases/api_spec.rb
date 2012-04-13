@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'time'
 
-describe "Readit::API" do
+describe "Readit::API",:vcr do
   before do
     # load consumer infos
     tokens = YAML.load_file(File.join(File.dirname(__FILE__),'../../readability.yml'))["development"]

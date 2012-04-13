@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.readability.com/api/rest/v1/bookmarks
+    body:
+      encoding: US-ASCII
+      string: url=http%3a%2f%2fwww.tripadvisor.com%2fRestaurant_Review-g297701-d1182615-Reviews-Cafe_Lotus-Ubud_Bali.html
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - OAuth gem v0.4.5
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="8h0KNWXC6t0RRD5JtIdJAKuEuw2yZKTZSQaNkW8cmmA",
+        oauth_signature="mVHvNDyX%2FIF8AMkoQlZE4mRTrdU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1334276909", oauth_token="<TOKENS>", oauth_version="1.0"
+  response:
+    status:
+      code: 409
+      message: CONFLICT
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 13 Apr 2012 00:28:31 GMT
+      Location:
+      - https://www.readability.com/api/rest/v1/bookmarks/2420783
+      P3p:
+      - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
+      Server:
+      - nginx/0.7.65
+      Set-Cookie:
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Fri, 11-May-2012
+        00:28:31 GMT; Max-Age=2419200; Path=/
+      Vary:
+      - Authorization,Cookie
+      Content-Length:
+      - '117'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"redirect": true, "existing_bookmark": 2420783}, "messages":
+        ["Bookmark already exists."], "success": true}'
+    http_version: !!null 
+  recorded_at: Fri, 13 Apr 2012 00:28:31 GMT
+recorded_with: VCR 2.0.1

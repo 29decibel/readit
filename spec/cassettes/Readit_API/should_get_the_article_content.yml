@@ -1,0 +1,221 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.readability.com/api/rest/v1/articles/eg60dxbv
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - OAuth gem v0.4.5
+      Authorization:
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="b98N2QxT1pgwccpSndFudO6OkKwKIjqWERMM5gUUgE",
+        oauth_signature="iLQG5dKkeKgm3lWhTWI7%2Fh2KRjU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1334276913", oauth_token="<TOKENS>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 13 Apr 2012 00:28:35 GMT
+      P3p:
+      - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
+      Server:
+      - nginx/0.7.65
+      Set-Cookie:
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Fri, 11-May-2012
+        00:28:35 GMT; Max-Age=2419200; Path=/
+      Vary:
+      - Authorization,Cookie
+      Content-Length:
+      - '13765'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! "{\n    \"domain\": \"www.joezimjs.com\",\n    \"author\": \"Joseph
+        Zimmerman\",\n    \"url\": \"http://www.joezimjs.com/javascript/javascript-design-patterns-decorator/?utm_source=javascriptweekly&utm_medium=email\",\n
+        \   \"short_url\": \"http://rdd.me/eg60dxbv\",\n    \"title\": \"JavaScript
+        Design Patterns\",\n    \"direction\": \"ltr\",\n    \"word_count\": 1166,\n
+        \   \"content\": \"<div><div class=\\\"entry-content\\\">\\r\\n\\t\\t<p>Today
+        I&#8217;d like to show another JavaScript Design Pattern: the Decorator, which
+        is a way to add features to objects without subclassing or adding extra attributes.
+        This post continues the JavaScript Design Patterns series that I started several
+        months ago. If you&#8217;re new to the JavaScript Design Patterns series that
+        I&#8217;m running here, you can find a list of the previous and upcoming posts
+        in the series at the <a href=\\\"http://www.joezimjs.com/javascript/javascript-design-patterns-decorator/#series\\\"
+        rel=\\\"nofollow\\\">bottom of the post</a>.</p>\\n<h2>Back on Course with
+        Tutorial Posts</h2>\\n<p>After the exciting launch of my new <a href=\\\"http://www.joezimjs.com/projects/publish-subscribe-jquery-plugin/\\\"
+        title=\\\"JZ Publish/Subscribe Project Page\\\" rel=\\\"nofollow\\\">jQuery
+        plugin</a> it&#8217;s been difficult to bring myself back to normal blogging
+        and back to this series. If you don&#8217;t know what I&#8217;m talking about,
+        then you should hop on over to the <a href=\\\"http://www.joezimjs.com/javascript/new-jquery-plugin-publish-subscribe/\\\"
+        title=\\\"New jQuery Plugin: Publish/Subscribe\\\" rel=\\\"nofollow\\\">plugin&#8217;s
+        announcement post</a> (when you&#8217;re done reading this, of course). However,
+        regardless of how this month started out, I&#8217;ve decided to make a commitment
+        to at least 2 &#8220;tutorial&#8221; posts per month. I put the word &#8220;tutorial&#8221;
+        in quotes because I&#8217;m not sure they can all be generally considered
+        tutorials, but I&#8217;m using the word to mean any post whose purpose is
+        to teach, as opposed to announcements or news and the like.</p>\\n<h2>On with
+        the Decorator Pattern</h2>\\n<p>Let&#8217;s return to purpose of this post:
+        learning about the decorator pattern. Like I said, this pattern permits us
+        to add features to an object without needing to subclass it. Instead we &#8220;decorate&#8221;
+        (wrap) it with another object with the same interface that has the one feature
+        we&#8217;re adding. To get a better idea of what I&#8217;m talking about,
+        let&#8217;s first demonstrate how someone lacking knowledge of the decorator
+        pattern would attempt this, especially if they&#8217;re coming from a background
+        of classical inheritance.</p>\\n<div class=\\\"geshi javascript\\\">\\n</div>\\n<p>As
+        you can see, every combination of features needs to be represented by a new
+        &#8220;class&#8221;. This might be okay if you have only a couple features,
+        but once you start growing the number of features, this becomes more and more
+        of a nightmare. Of course, if you want to be a jerk, you can do this in an
+        app and leave it for someone else to maintain, but I don&#8217;t know how
+        long you&#8217;d go before being punched in the face if that programmer needs
+        to add another feature (or 5 more!).</p>\\n<h2>How the Decorator Pattern can
+        Help</h2>\\n<p>Thankfully the Decorator Pattern can make things considerably
+        simpler for us and future maintainers of our code. First we&#8217;ll create
+        the base object that will be a <code>Car</code> with no cool features. This
+        also sets up the interface that the decorators will use.</p>\\n<div class=\\\"geshi
+        javascript\\\">\\n<ol><li class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span
+        class=\\\"kw2\\\">var</span> Car = <span class=\\\"kw2\\\">function</span><span
+        class=\\\"br0\\\">(</span><span class=\\\"br0\\\">)</span> <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; console.<span class=\\\"me1\\\">log</span><span
+        class=\\\"br0\\\">(</span><span class=\\\"st0\\\">'Assemble: build frame,
+        add core parts'</span><span class=\\\"br0\\\">)</span>;</p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n\\n</li>\\n\\n<li class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span
+        class=\\\"co1\\\">// The decorators will also need to implement these functions</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span class=\\\"co1\\\">// to comply
+        with Car's interface.</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p class=\\\"de1\\\">Car.<span
+        class=\\\"me1\\\">prototype</span> = <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; start: <span class=\\\"kw2\\\">function</span><span
+        class=\\\"br0\\\">(</span><span class=\\\"br0\\\">)</span> <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; &#160; &#160; console.<span
+        class=\\\"me1\\\">log</span><span class=\\\"br0\\\">(</span><span class=\\\"st0\\\">'The
+        engine starts with roar!'</span><span class=\\\"br0\\\">)</span>;</p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n\\n</li>\\n<li class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160;
+        &#160; drive: <span class=\\\"kw2\\\">function</span><span class=\\\"br0\\\">(</span><span
+        class=\\\"br0\\\">)</span> <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; &#160; &#160; console.<span
+        class=\\\"me1\\\">log</span><span class=\\\"br0\\\">(</span><span class=\\\"st0\\\">'Away
+        we go!'</span><span class=\\\"br0\\\">)</span>;</p>\\n</li>\\n<li class=\\\"li1\\\">\\n\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; getPrice: <span class=\\\"kw2\\\">function</span><span
+        class=\\\"br0\\\">(</span><span class=\\\"br0\\\">)</span> <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; &#160; &#160; <span
+        class=\\\"kw1\\\">return</span> <span class=\\\"nu0\\\">11000.00</span>;</p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n\\n</li>\\n<li class=\\\"li1\\\">\\n\\n</li>\\n</ol></div>\\n<p>Now
+        we&#8217;ll create the decorator &#8220;class&#8221; that each of the decorator
+        will inherit from. You&#8217;ll notice that each of the functions simply pass
+        the call on to the <code>Car</code> that they&#8217;re wrapping. In this case
+        the only functions that will be overridden are <code>assemble</code> and <code>getPrice</code>.</p>\\n<div
+        class=\\\"geshi javascript\\\">\\n<ol><li class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span
+        class=\\\"co1\\\">// You need to pass in the Car (or CarDecorator) in order
+        to</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span
+        class=\\\"co1\\\">// be able to add features to it.</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span class=\\\"kw2\\\">var</span>
+        CarDecorator = <span class=\\\"kw2\\\">function</span><span class=\\\"br0\\\">(</span>car<span
+        class=\\\"br0\\\">)</span> <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; <span class=\\\"kw1\\\">this</span>.<span
+        class=\\\"me1\\\">car</span> = car;</p>\\n</li>\\n<li class=\\\"li1\\\">\\n\\n</li>\\n\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span class=\\\"co1\\\">// CarDecorator
+        is implementing the same interface</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p
+        class=\\\"de1\\\">CarDecorator.<span class=\\\"me1\\\">prototype</span> =
+        <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p
+        class=\\\"de1\\\">&#160; &#160; start: <span class=\\\"kw2\\\">function</span><span
+        class=\\\"br0\\\">(</span><span class=\\\"br0\\\">)</span> <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; &#160; &#160; <span
+        class=\\\"kw1\\\">this</span>.<span class=\\\"me1\\\">car</span>.<span class=\\\"me1\\\">start</span><span
+        class=\\\"br0\\\">(</span><span class=\\\"br0\\\">)</span>;</p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n\\n</li>\\n<li class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160;
+        &#160; drive: <span class=\\\"kw2\\\">function</span><span class=\\\"br0\\\">(</span><span
+        class=\\\"br0\\\">)</span> <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; &#160; &#160; <span
+        class=\\\"kw1\\\">this</span>.<span class=\\\"me1\\\">car</span>.<span class=\\\"me1\\\">drive</span><span
+        class=\\\"br0\\\">(</span><span class=\\\"br0\\\">)</span>;</p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n\\n</li>\\n<li class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160;
+        &#160; getPrice: <span class=\\\"kw2\\\">function</span><span class=\\\"br0\\\">(</span><span
+        class=\\\"br0\\\">)</span> <span class=\\\"br0\\\">{</span></p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\">&#160; &#160; &#160; &#160; <span
+        class=\\\"kw1\\\">return</span> <span class=\\\"kw1\\\">this</span>.<span
+        class=\\\"me1\\\">car</span>.<span class=\\\"me1\\\">getPrice</span><span
+        class=\\\"br0\\\">(</span><span class=\\\"br0\\\">)</span>;</p>\\n</li>\\n<li
+        class=\\\"li1\\\">\\n\\n</li>\\n<li class=\\\"li1\\\">\\n\\n</li>\\n</ol></div>\\n<p>Next
+        we create a decorator object for each feature and override the parent&#8217;s
+        functions whenever we want to add more or different functionality there.</p>\\n<div
+        class=\\\"geshi javascript\\\">\\n</div>\\n<p>Notice that we always call the
+        same function on the wrapped object as well. This is somewhat similar to the
+        way a <a href=\\\"http://www.joezimjs.com/javascript/javascript-design-patterns-composite/\\\"
+        title=\\\"JavaScript Design Patterns: Composite\\\" rel=\\\"nofollow\\\">composite</a>
+        works, though the similarities between the two patterns pretty much end there.
+        In this example, we always call the wrapped object&#8217;s function first
+        before adding in the new information from the decorator (if any exists for
+        that function). This creates the desired effect of having the core functions
+        executing first,  but other applications might require different order, or
+        possibly might not even call the wrapped object&#8217;s function if the intention
+        is to completely change the functionality rather than adding on to it.</p>\\n<p><img
+        src=\\\"http://www.joezimjs.com/wp-content/uploads/decorator_structure.png\\\"
+        alt=\\\"Structure of the Decorator Pattern\\\" title=\\\"Structure of the
+        Decorator Pattern\\\" width=\\\"570\\\" class=\\\"alignnone size-full wp-image-351\\\"></p>\\n<h2>Seeing
+        our JavaScript in Action</h2>\\n<p>So how do we use the code that we just
+        spent this entire time making? Well the actual code is below, but maybe I
+        should do a little explaining first. Of course, you&#8217;re free to skip
+        this and jump straight to the code if you think you&#8217;ve got it down.</p>\\n<p>First
+        we create a <code>Car</code> object. Then, we create the decorator for the
+        feature we want to add onto it and pass the <code>Car</code> into its constructor.
+        The object returned from the decorator&#8217;s constructor is assigned back
+        to the variable that previously held the <code>Car</code> object because since
+        the decorators use the same interface, they too can be considered <code>Car</code>s.
+        We keep adding more features until we&#8217;re satisfied and then we have
+        our desired car that we can do whatever we want with.</p>\\n<div class=\\\"geshi
+        javascript\\\">\\n<ol><li class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span
+        class=\\\"kw2\\\">var</span> car = <span class=\\\"kw2\\\">new</span> Car<span
+        class=\\\"br0\\\">(</span><span class=\\\"br0\\\">)</span>; &#160; &#160;
+        &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;<span class=\\\"co1\\\">//
+        log \\\"Assemble: build frame, add core parts\\\"</span></p>\\n</li>\\n\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span class=\\\"co1\\\">// give
+        the car some power windows</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p
+        class=\\\"de1\\\">car = <span class=\\\"kw2\\\">new</span> PowerWindowDecorator<span
+        class=\\\"br0\\\">(</span>car<span class=\\\"br0\\\">)</span>; &#160; &#160;<span
+        class=\\\"co1\\\">// log \\\"Assemble: add power windows\\\"</span></p>\\n</li>\\n\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span class=\\\"co1\\\">// now some
+        power locks and A/C</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p class=\\\"de1\\\">car
+        = <span class=\\\"kw2\\\">new</span> PowerLocksDecorator<span class=\\\"br0\\\">(</span>car<span
+        class=\\\"br0\\\">)</span>; &#160; &#160; <span class=\\\"co1\\\">// log \\\"Assemble:
+        add power locks\\\"</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p class=\\\"de1\\\">car
+        = <span class=\\\"kw2\\\">new</span> ACDecorator<span class=\\\"br0\\\">(</span>car<span
+        class=\\\"br0\\\">)</span>; &#160; &#160; &#160; &#160; &#160; &#160; <span
+        class=\\\"co1\\\">// log \\\"Assemble: add A/C unit\\\"</span></p>\\n</li>\\n\\n<li
+        class=\\\"li1\\\">\\n<p class=\\\"de1\\\"><span class=\\\"co1\\\">// let's
+        start this bad boy up and take a drive!</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p
+        class=\\\"de1\\\">car.<span class=\\\"me1\\\">start</span><span class=\\\"br0\\\">(</span><span
+        class=\\\"br0\\\">)</span>; <span class=\\\"co1\\\">// log 'The engine starts
+        with roar!' and 'The cool air starts blowing.'</span></p>\\n</li>\\n<li class=\\\"li1\\\">\\n<p
+        class=\\\"de1\\\">car.<span class=\\\"me1\\\">drive</span><span class=\\\"br0\\\">(</span><span
+        class=\\\"br0\\\">)</span>; <span class=\\\"co1\\\">// log 'Away we go!' and
+        'The doors automatically lock'</span></p>\\n</li>\\n</ol></div>\\n<h2>Concluding
+        this Fiasco</h2>\\n<p>The Decorator proves to be a nice way of maintaining
+        differentiating features for an object and definitely helps improve maintainability
+        over the long haul. You may have noticed, though, that I didn&#8217;t include
+        any code to make sure that we didn&#8217;t accidentally add the same feature
+        more than once. Don&#8217;t worry, the next post will give us a clean answer
+        without having to change any of the code we&#8217;ve already written. Adding
+        checks into the decorators to accomplish would prove to be annoying.</p>\\n<p>If
+        you&#8217;ve got something to say about the Decorator Pattern, this post,
+        or even just JavaScript in general, make your voice heard in the comments
+        section below. I&#8217;d love to hear it, even if you&#8217;re just letting
+        me know I&#8217;m an idiot (just try to make it more constructive than &#8220;you&#8217;re
+        an idiot&#8221;). We all have to grow somehow. Also, I&#8217;d greatly appreciate
+        if you&#8217;d use the social sharing buttons below to spread the word about
+        this post. Little guys like me don&#8217;t get big without some help. Happy
+        Coding!</p>\\n<p id=\\\"series\\\">JavaScript Design Patterns series:</p>\\n\\t\\t\\t</div>\\r\\n\\r\\n\\t</div>\",\n
+        \   \"date_published\": \"2012-01-13 00:00:00\",\n    \"next_page_href\":
+        null,\n    \"processed\": true,\n    \"content_size\": 12685,\n    \"id\":
+        \"eg60dxbv\"\n}"
+    http_version: !!null 
+  recorded_at: Fri, 13 Apr 2012 00:28:35 GMT
+recorded_with: VCR 2.0.1

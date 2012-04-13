@@ -38,15 +38,15 @@ Scenario: archive bookmark by id
   When call archive with bookmark_id
   Then got bookmark's archive set to true
 
-Scenario: user can add and delete bookmark
-  Given the readit api client
-  When add bookmark with url http://google.com
-  Then got status ok
-  When fetch the latest bookmark
-  Then got the bookmark with url http://google.com
-  When delete this new added bookmark
-  And fetch the latest bookmark
-  Then the latesed bookmark which url is not http://google.com
+  ## Scenario: user can add and delete bookmark
+  ##   Given the readit api client
+  ##   When add bookmark with url http://google.com
+  ##   Then got status ok
+  ##   When fetch the bookmark info with url http://google.com
+  ##   Then got the bookmark with url http://google.com
+  ##   When delete this new added bookmark
+  ##   And fetch the latest bookmark
+  ##   Then the latesed bookmark which url is not http://google.com
 
 
 
