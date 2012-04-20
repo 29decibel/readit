@@ -83,12 +83,18 @@ module Readit
     # per_page default 20,max 50
     # exclude_accessibility
     # only_deleted
+    # ***** Special args *****
+    # to get bookmarks meta infos
+    # :include_meta => true
+    # item_count=20 item_count_total=633 num_pages=32 page=1
+    # bookmarks,meta = @api.bookmarks(:include_meta => true)
     def bookmarks(args={})
       if args[:bookmark_id] and args[:bookmark_id]!=''
         request(:get,"/bookmarks/#{args[:bookmark_id]}")
       else
         params = args.map{|k,v| "#{k}=#{v}"}.join('&')
-        request(:get,"/bookmarks?#{URI.escape(params)}").bookmarks
+        result = request(:get,"/bookmarks?#{URI.escape(params)}")
+        args[:include_meta] ? [result.bookmarks,result.meta] : result.bookmarks
       end
     end
 

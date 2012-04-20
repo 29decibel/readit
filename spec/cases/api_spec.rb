@@ -11,7 +11,7 @@ describe "Readit::API",:vcr do
   end
 
   let :bookmarks do
-    @bms ||= @api.bookmarks
+    @bms = @api.bookmarks
   end
 
   let :bookmark_ids do
@@ -33,10 +33,18 @@ describe "Readit::API",:vcr do
     resp.should_not == nil
   end
 
+  it "can get meta infos of bookmarks" do
+    bookmarks,meta = @api.bookmarks(:include_meta => true)
+    bookmarks.count.should > 0
+    meta.item_count.should > 0
+    meta.item_count_total.should > 0
+    meta.num_pages.should > 0
+    meta.page.should > 0
+  end
+
   it "can get bookmark location when bookmarked a url" do
     url = 'http://www.jslib.org.cn/njlib_xsyj/201011/t20101130_98154.htm'
     resp = @api.bookmark :url => url
-    puts resp.inspect
     resp.bookmark_id.should_not be_nil
     resp.article_id.should_not be_nil
   end

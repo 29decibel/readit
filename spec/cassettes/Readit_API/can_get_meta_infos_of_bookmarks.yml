@@ -1,0 +1,372 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.readability.com/api/rest/v1/bookmarks?include_meta=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - OAuth gem v0.4.5
+      Authorization:
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="EKXEyKKN0p4QqhmyroengLzJvKpOrF0mceRuKypDvc",
+        oauth_signature="AVPGOyrvfSrbx4nyEXl4mptUpVU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1334915690", oauth_token="<TOKENS>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 20 Apr 2012 09:54:59 GMT
+      P3p:
+      - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
+      Server:
+      - nginx/0.7.65
+      Set-Cookie:
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Fri, 18-May-2012
+        09:54:59 GMT; Max-Age=2419200; Path=/
+      Vary:
+      - Authorization,Cookie
+      Content-Length:
+      - '25756'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: ! "{\n    \"bookmarks\": [\n        {\n            \"user_id\": 24591,\n
+        \           \"read_percent\": \"0.00\",\n            \"date_updated\": \"2012-04-18
+        09:04:08\",\n            \"favorite\": false,\n            \"id\": 8164259,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"untether.tv\",\n
+        \               \"title\": \"HTML5, WebGL and BlackBerry 10: talking mobile
+        web dev with RIM’s Adam Stanley and Alex Kinsella\",\n                \"url\":
+        \"http://untether.tv/2012/html5-webgl-and-blackberry-10-talking-mobile-web-dev-with-rims-adam-stanley-and-alex-kinsella/?utm_source=html5weekly&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://tvuntether.zippykidcdn.com/wp-content/uploads/2012/04/HTML5_Logo_512.png\",\n
+        \               \"author\": \"Douglas Soltys\",\n                \"excerpt\":
+        \"In an effort to right BlackBerry&#x2019;s ship, RIM has been doubling down
+        on developers, giving away BlackBerry 10 Dev Alpha devices to attendees of
+        its upcoming mobile conference in May, and&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1846,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"rqpxpcex\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/rqpxpcex\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-04-18 09:04:08\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-04-18 09:02:13\",\n            \"favorite\":
+        false,\n            \"id\": 8164111,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"buildnewgames.com\",\n                \"title\": \"Mobile Game Primer\",\n
+        \               \"url\": \"http://buildnewgames.com/mobile-game-primer/?utm_source=html5weekly\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Pascal
+        Rettig\",\n                \"excerpt\": \"Until recently, performance of browser-based
+        games for mobile devices has lagged significantly behind desktop performance.
+        If you wanted to create a Canvas-based mobile game, performance was terrible&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 5157,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"humyxn4a\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/humyxn4a\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-18
+        09:02:13\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-15 21:03:48\",\n            \"favorite\": false,\n            \"id\":
+        7919160,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"www.nytimes.com\",\n
+        \               \"title\": \"Luxury Stores Pull Out Mandarin Phrase Books
+        to Make the Sale\",\n                \"url\": \"http://www.nytimes.com/2012/04/15/business/global/american-brands-seek-favor-with-wealthy-chinese-tourists.html?_r=1\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"STEPHANIE
+        CLIFFORD\",\n                \"excerpt\": \"&#13; Over five days in January,
+        a group of visitors to New York was treated to a private concert with the
+        pianist Lang Lang at the Montblanc store, cocktails and a fashion show attended
+        by the&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        920,\n                \"date_published\": \"2012-04-14 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"3mm1zeaq\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/3mm1zeaq\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-15
+        21:03:48\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-15 05:16:49\",\n            \"favorite\": false,\n            \"id\":
+        7870621,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"hk.ibtimes.com\",\n
+        \               \"title\": \"我拒絕了 Zynga，在 Omgpop 被2億美金收購之後\",\n                \"url\":
+        \"http://hk.ibtimes.com/articles/10256/20120330/i-refused-zynga-in-omgpop-was-200-million-after-purchase.htm\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"QQ&#31354;&#38388; &#26032;&#28010;&#24494;&#34180;
+        &#33150;&#35759;&#24494;&#34180; &#20154;&#20154;&#32593; &#24320;&#24515;&#32593;
+        &#26356;&#22810; 2012&#24180;03&#26376;31&#26085; 03:31:31&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 127,\n                \"date_published\":
+        \"2012-03-30 00:00:00\",\n                \"dek\": null,\n                \"processed\":
+        true,\n                \"id\": \"pybhotx8\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/pybhotx8\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-04-15 05:16:49\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-04-14 19:00:28\",\n            \"favorite\":
+        false,\n            \"id\": 7847103,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.antipope.org\",\n                \"title\": \"What Amazon's ebook strategy
+        means By Charlie Stross\",\n                \"url\": \"http://www.antipope.org/charlie/blog-static/2012/04/understanding-amazons-strategy.html\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Charlie
+        Stross\",\n                \"excerpt\": \"It seems to me that a lot of folks
+        in the previous discussion don't really understand quite what makes Amazon
+        so interesting&#x2014;and threatening, for that matter&#x2014;to the publishing
+        industry.&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        2169,\n                \"date_published\": null,\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"7lunxam6\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/7lunxam6\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-14
+        19:00:28\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 19:25:25\",\n            \"favorite\": false,\n            \"id\":
+        7784452,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"blog.engineering.kiip.me\",\n
+        \               \"title\": \"A Year with MongoDB\",\n                \"url\":
+        \"http://blog.engineering.kiip.me/post/20988881092/a-year-with-mongodb\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"This week marks the one year anniversary of
+        Kiip running MongoDB in production. As of this week, we&#x2019;ve also moved
+        over 95% of our data off of MongoDB onto systems such as Riak and PostgreSQL,&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 1357,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"irlxjdrx\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/irlxjdrx\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        19:25:25\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 19:25:17\",\n            \"favorite\": false,\n            \"id\":
+        7784435,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"team.adzerk.com\",\n
+        \               \"title\": \"Life's Too Short to Write Shitty Software\",\n
+        \               \"url\": \"http://team.adzerk.com/post/21024440104/lifes-too-short-to-write-shitty-software\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"&#13; A few Fridays ago, I was at my&#xA0;favorite
+        bar&#xA0;in downtown Raleigh with some friends. We were hanging out and having
+        a casual conversation about startup culture and how it compares to&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 1156,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"aaduw5a8\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/aaduw5a8\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        19:25:17\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 19:24:40\",\n            \"favorite\": false,\n            \"id\":
+        7784400,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"blog.lassus.se\",\n
+        \               \"title\": \"Olov Lassus\",\n                \"url\": \"http://blog.lassus.se/2012/04/meteor-meets-nogpl.html\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"13 Apr 2012Meteor made a big splash this week.
+        Check out their screencast if you haven&#x2019;t already. For &#x201C;real-time&#x201D;
+        web applications it really seems to simplify things a whole lot.&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 1322,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"tav7gxiw\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/tav7gxiw\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        19:24:40\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 19:24:33\",\n            \"favorite\": false,\n            \"id\":
+        7784395,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"robbieabed.com\",\n
+        \               \"title\": \"Fire Me. I Beg You.\",\n                \"url\":
+        \"http://robbieabed.com/fire-me-i-beg-you/\",\n                \"lead_image_url\":
+        null,\n                \"author\": \"admin\",\n                \"excerpt\":
+        \"&#13; In every situation I ask myself two questions: What do I want the
+        outcome of this situation to be What do I secretly want the outcome of this
+        situation to be For example, at one of my previous&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 421,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"ghcycho1\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/ghcycho1\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-04-13 19:24:33\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-04-13 19:24:10\",\n            \"favorite\":
+        false,\n            \"id\": 7784368,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.chris-granger.com\",\n                \"title\": \"chris granger\",\n
+        \               \"url\": \"http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"12 Apr 2012 Despite the dramatic shift toward
+        simplification in software interfaces, the world of development tools continues
+        to shrink our workspace with feature after feature in every release. Even&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 1116,\n
+        \               \"date_published\": \"2012-04-12 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"a6wsjhlo\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/a6wsjhlo\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        19:24:10\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 19:23:38\",\n            \"favorite\": false,\n            \"id\":
+        7784325,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"bitquabit.com\",\n
+        \               \"title\": \"Coding is priority number five\",\n                \"url\":
+        \"http://bitquabit.com/post/coding-is-priority-number-five/\",\n                \"lead_image_url\":
+        null,\n                \"author\": null,\n                \"excerpt\": \"Let&#x2019;s
+        set the scene. It&#x2019;s the summer of 2010. Kiln had been launched into
+        the wild for all of six months, after a grueling year-long, no-revenue sprint
+        to turn my dinky prototype that&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1394,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"paeteqre\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/paeteqre\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-04-13 19:23:38\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-04-13 09:44:00\",\n            \"favorite\":
+        false,\n            \"id\": 7744880,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"lostechies.com\",\n                \"title\": \"Backbone.js And JavaScript
+        Garbage Collection\",\n                \"url\": \"http://lostechies.com/derickbailey/2012/03/19/backbone-js-and-javascript-garbage-collection/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Derick
+        Bailey\",\n                \"excerpt\": \"A question was asked on Stack Overflow
+        recently, and I provided an answer that I think is worth re-blogging here
+        (while cleaning up the text / grammar).&#160;My answer goes in to a little
+        bit of the&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        1401,\n                \"date_published\": \"2012-03-19 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"nsumaq5i\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/nsumaq5i\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        09:44:00\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 09:43:43\",\n            \"favorite\": false,\n            \"id\":
+        7744859,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"lostechies.com\",\n
+        \               \"title\": \"A jQuery Plugin To Limit AJAX Requests For A
+        Resource\",\n                \"url\": \"http://lostechies.com/derickbailey/2012/03/20/trafficcop-a-jquery-plugin-to-limit-ajax-requests-for-a-resource/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Derick
+        Bailey\",\n                \"excerpt\": \"A while back, I wrote about asynchronous
+        template loading for Backbone applications. At the bottom of that post, I
+        showed some code that I wrote which would limit the number of AJAX calls that
+        are&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        188,\n                \"date_published\": \"2012-03-20 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"bo0zuo1k\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/bo0zuo1k\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        09:43:43\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 09:43:36\",\n            \"favorite\": false,\n            \"id\":
+        7744850,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"lostechies.com\",\n
+        \               \"title\": \"Managing Layouts And Nested Views With Backbone.Marionette\",\n
+        \               \"url\": \"http://lostechies.com/derickbailey/2012/03/22/managing-layouts-and-nested-views-with-backbone-marionette/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Derick
+        Bailey\",\n                \"excerpt\": \"I&#8217;ve received numerous questions
+        about managing layouts and nested views in Backbone over the last few months.
+        Until recently, though, I never had a great answer. Many of the applications
+        that&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        1118,\n                \"date_published\": \"2012-03-22 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"ja9aqe66\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/ja9aqe66\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        09:43:36\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 09:43:26\",\n            \"favorite\": false,\n            \"id\":
+        7744839,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"lostechies.com\",\n
+        \               \"title\": \"Providing Synchronous / Asynchronous Flexibility
+        With jQuery.when\",\n                \"url\": \"http://lostechies.com/derickbailey/2012/03/27/providing-synchronous-asynchronous-flexibility-with-jquery-when/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Derick
+        Bailey\",\n                \"excerpt\": \"I&#8217;ve quickly become a fan
+        of jQuery&#8217;s Deferred / Promise features. They&#8217;ve been around for
+        a little bit now, but I only recent started using them and they&#8217;ve helped
+        me solve&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        517,\n                \"date_published\": \"2012-03-27 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"d2r0pcpa\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/d2r0pcpa\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        09:43:26\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 09:43:18\",\n            \"favorite\": false,\n            \"id\":
+        7744828,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"lostechies.com\",\n
+        \               \"title\": \"Proxies And Decorators In JavaScript\",\n                \"url\":
+        \"http://lostechies.com/derickbailey/2012/03/29/proxies-and-decorators-in-javascript/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Derick
+        Bailey\",\n                \"excerpt\": \"Proxies and Decorators are both
+        design patterns in software development &#8211; recipes that&#160;provide
+        common solution to common problems. I largely group Proxies and Decorators
+        in to the same&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        950,\n                \"date_published\": \"2012-03-29 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"tmioi3zv\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/tmioi3zv\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        09:43:18\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 09:43:08\",\n            \"favorite\": false,\n            \"id\":
+        7744811,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"lostechies.com\",\n
+        \               \"title\": \"Revisiting The Backbone Event Aggregator\",\n
+        \               \"url\": \"http://lostechies.com/derickbailey/2012/04/03/revisiting-the-backbone-event-aggregator-lessons-learned/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Derick
+        Bailey\",\n                \"excerpt\": \"It&#8217;s been a while since I
+        originally talked about using an event aggregator in my Backbone applications.
+        Since then, I&#8217;ve encapsulated the &#8220;vent&#8221; object in my&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 1714,\n
+        \               \"date_published\": \"2012-04-03 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"1w9rvcpd\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/1w9rvcpd\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        09:43:08\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 09:42:02\",\n            \"favorite\": false,\n            \"id\":
+        7744707,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"lostechies.com\",\n
+        \               \"title\": \"A JavaScript Class-y Inheritance Example\",\n
+        \               \"url\": \"http://lostechies.com/derickbailey/2012/04/12/classyobjects-a-javascript-classy-inheritance-example/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Derick
+        Bailey\",\n                \"excerpt\": \"I recently released a screencast
+        that covers JavaScript Objects &amp; Prototypes on my WatchMeCode site. In
+        this screencast, I go through all of the basics of working with objects in
+        JavaScript,&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        1790,\n                \"date_published\": \"2012-04-12 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"yakbz17v\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/yakbz17v\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        09:42:01\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 08:44:00\",\n            \"favorite\": false,\n            \"id\":
+        7740376,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"addyosmani.com\",\n
+        \               \"title\": \"Understanding MVVM – A Guide For JavaScript Developers\",\n
+        \               \"url\": \"http://addyosmani.com/blog/understanding-mvvm-a-guide-for-javascript-developers/?utm_source=javascriptweekly&utm_medium=email\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"MVVM (Model View ViewModel) is an architectural
+        pattern based on MVC and MVP, which attempts to more clearly separate the
+        development of user-interfaces (UI) from that of the business logic and&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 3800,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"rqvn0cnz\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/rqvn0cnz\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        08:43:59\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-04-13 08:44:01\",\n            \"favorite\": false,\n            \"id\":
+        7740352,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"dublintech.blogspot.co.uk\",\n
+        \               \"title\": \"Javascript language a- z cheat sheet\",\n                \"url\":
+        \"http://dublintech.blogspot.co.uk/2012/04/javascript-language-z-cheat-sheet.html?utm_source=javascriptweekly&utm_medium=email\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Alex
+        Staveley\",\n                \"excerpt\": \"Here is an A - Z list of some
+        Javascript idioms and patterns. The idea is to convey in simple terms some
+        features of the actual Javascript language (rather than how it can interact
+        with DOM).&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        3459,\n                \"date_published\": \"2012-04-13 11:22:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"5us8o4qv\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/5us8o4qv\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-04-13
+        08:43:40\",\n            \"archive\": true\n        }\n    ],\n    \"meta\":
+        {\n        \"num_pages\": 33,\n        \"page\": 1,\n        \"item_count_total\":
+        659,\n        \"item_count\": 20\n    },\n    \"conditions\": {\n        \"opened_since\":
+        null,\n        \"favorited_since\": null,\n        \"domain\": \"\",\n        \"updated_until\":
+        null,\n        \"exclude_accessibility\": \"\",\n        \"archived_until\":
+        null,\n        \"favorite\": null,\n        \"opened_until\": null,\n        \"archived_since\":
+        null,\n        \"added_until\": null,\n        \"updated_since\": null,\n
+        \       \"user\": \"<TOKENS>\",\n        \"per_page\": 20,\n        \"favorited_until\":
+        null,\n        \"order\": \"-date_added\",\n        \"only_deleted\": null,\n
+        \       \"archive\": null,\n        \"added_since\": null,\n        \"page\":
+        1\n    }\n}"
+    http_version: !!null 
+  recorded_at: Fri, 20 Apr 2012 09:55:01 GMT
+recorded_with: VCR 2.0.1

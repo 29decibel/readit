@@ -51,6 +51,9 @@ Readit::Config.consumer_secret = some_value
 ```ruby
 # get all bookmarks, result will be a hash array
 @api.bookmarks
+# get bookmarks along with meta info :
+# item_count, item_count_total, num_pages, page
+bookmarks,meta = @api.bookmarks(:include_meta => true)
 
 # add bookmark
 bookmark_info = @api.bookmark(:url=>'http://some_article_url.html')
