@@ -13,7 +13,7 @@ group :development, :test do
   if RUBY_PLATFORM =~ /darwin/
     # OS X integration
     gem "ruby_gntp"
-    gem "rb-fsevent", "~> 0.4.3.1"
+    gem "rb-fsevent", "~> 0.9.0"
   end
 end
 gem 'oauth'
