@@ -54,9 +54,9 @@ module Readit
       request(:get,'/')
     end
 
-    # Retrieve a single Article, including its content. 
+    # Retrieve a single Article, including its content.
     # api rest address: /articles/{article_id}
-    # @param article_id the article_id 
+    # @param article_id the article_id
     def article(article_id)
       request(:get,"/articles/#{article_id}")
     end
@@ -98,7 +98,7 @@ module Readit
       end
     end
 
-    # Add a bookmark. Returns 202 Accepted, meaning that the bookmark has been added but no guarantees are made as 
+    # Add a bookmark. Returns 202 Accepted, meaning that the bookmark has been added but no guarantees are made as
     # to whether the article proper has yet been parsed.
     # @param args args to bookmark a url
     # url the address to bookmark
@@ -114,7 +114,7 @@ module Readit
       request(:post,'/bookmarks',args) do |response|
         Hashie::Mash.new({
           :status =>response.code,
-          :bookmark_id=> response.code == '202' ? response["Location"].match(/bookmarks\/(.*)/)[1] : '',
+          :bookmark_id=> ['202', '409'].include?(response.code) ? response["Location"].match(/bookmarks\/(.*)/)[1] : '',
           :article_id=> response.code== '202' ? response["X-Article-Location"].match(/articles\/(.*)/)[1] : ''})
       end
     end
@@ -141,11 +141,11 @@ module Readit
       update_bookmark(bookmark_id,:favorite=>1)
     end
 
-    # Remove a single bookmark from this user's history. 
+    # Remove a single bookmark from this user's history.
     # NOTE: THIS IS PROBABLY NOT WHAT YOU WANT. This is particularly for the case where a user accidentally bookmarks
-    # something they have no intention of reading or supporting. 
+    # something they have no intention of reading or supporting.
     # In almost all cases, you'll probably want to use archive by POSTing archive=1 to this bookmark.
-    # If you use DELETE and this months bookmarks have not yet been tallied, 
+    # If you use DELETE and this months bookmarks have not yet been tallied,
     # the site associated with this bookmark will not receive any contributions for this bookmark.
     # Use archive! It's better.
     # Returns a 204 on successful remove.
@@ -166,7 +166,7 @@ module Readit
       request(:get,"/users/_current")
     end
 
-    private 
+    private
     def request(method,url,args={})
       consumer = ::OAuth::Consumer.new(Readit::Config.consumer_key,Readit::Config.consumer_secret,:site=>SITE_URL)
       atoken = ::OAuth::AccessToken.new(consumer, @access_token, @access_token_secret)
