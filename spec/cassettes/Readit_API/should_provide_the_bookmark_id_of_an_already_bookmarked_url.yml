@@ -1,0 +1,402 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.readability.com/api/rest/v1/bookmarks?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 20 Nov 2012 00:49:29 GMT
+      P3p:
+      - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
+      Server:
+      - nginx/1.2.1
+      Set-Cookie:
+      - readabilityToken=VrCDnpxecfZdYMqfQkfdNZVXsTCeNgpWT77PEbJC; expires=Tue, 18-Dec-2012
+        00:49:29 GMT; Max-Age=2419200; Path=/
+      Vary:
+      - Accept-Encoding
+      - Authorization, Cookie
+      Content-Length:
+      - '24916'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! "{\n    \"bookmarks\": [\n        {\n            \"user_id\": 893434,\n
+        \           \"read_percent\": \"0.00\",\n            \"date_updated\": \"2012-11-19
+        14:21:48\",\n            \"favorite\": false,\n            \"id\": 24858023,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"devans.us\",\n                \"title\":
+        \"Turing Incomplete\",\n                \"url\": \"http://devans.us/public/post/13/the-cost-of-the-war-on-drugs\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"The war on drugs is a mantra of social conservatives
+        and liberals alike. We need to protect our children against the evils of drugs
+        on the streets, don't we? Let us set aside for a moment the fact&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 395,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"uxh9btpt\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/uxh9btpt\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-11-19
+        13:39:48\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        893434,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-11-19 18:52:11\",\n            \"favorite\": false,\n            \"id\":
+        24857562,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"devans.us\",\n
+        \               \"title\": \"Turing Incomplete\",\n                \"url\":
+        \"http://devans.us/public/post/23/government-and-the-use-of-force\",\n                \"lead_image_url\":
+        null,\n                \"author\": null,\n                \"excerpt\": \"I
+        have been asked recently to clearly define my views on government and the
+        use of force. Stated succinctly I believe that every human being has a fundamental
+        core of rights that is theirs because&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1145,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"qbgqrvft\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/qbgqrvft\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-19 13:32:38\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 15:10:24\",\n            \"favorite\":
+        false,\n            \"id\": 24629791,\n            \"date_archived\": \"2012-11-18
+        15:10:24\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"www.salon.com\",\n                \"title\":
+        \"Bring back the 40-hour work week\",\n                \"url\": \"http://www.salon.com/2012/03/14/bring_back_the_40_hour_work_week/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://media.salon.com/2012/03/tired_worker-150x150.png\",\n
+        \               \"author\": \"Sara Robinson, Alternet\",\n                \"excerpt\":
+        \"(Credit: iStockphoto/Mordollf) This article originally appeared on AlterNet.
+        If you&#x2019;re lucky enough to have a job right now, you&#x2019;re probably
+        doing everything possible to hold onto it.&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 4068,\n                \"date_published\":
+        \"2012-03-14 12:00:00\",\n                \"dek\": null,\n                \"processed\":
+        true,\n                \"id\": \"zowrjzry\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/zowrjzry\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:48:11\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 16:50:45\",\n            \"favorite\":
+        false,\n            \"id\": 24629789,\n            \"date_archived\": \"2012-11-18
+        16:50:45\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"allthingsd.com\",\n                \"title\":
+        \"Windows Head Steven Sinofsky to Leave Microsoft\",\n                \"url\":
+        \"http://allthingsd.com/20121112/breaking-windows-head-steven-sinofsky-to-leave-microsoft/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Ina
+        Fried\",\n                \"excerpt\": \"Windows unit president Steven Sinofsky
+        is leaving the company, effective immediately, AllThingsD has confirmed. The
+        move comes less than a month after Sinofsky presided over the launch of Windows
+        8&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        445,\n                \"date_published\": \"2012-11-12 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"22zk6zfo\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/22zk6zfo\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-11-16
+        08:48:10\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        893434,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-11-18 16:50:50\",\n            \"favorite\": true,\n            \"id\":
+        24629787,\n            \"date_archived\": \"2012-11-18 16:50:50\",\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"tranquillpoet.com\",\n
+        \               \"title\": \"Tranquillity\",\n                \"url\": \"http://tranquillpoet.com/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"About | Source Rhyme Scheme\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 15,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"3akmirzo\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/3akmirzo\",\n            \"date_favorited\": \"2012-11-18
+        16:50:35\",\n            \"date_added\": \"2012-11-16 08:48:09\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 14:54:22\",\n            \"favorite\":
+        false,\n            \"id\": 24629786,\n            \"date_archived\": \"2012-11-18
+        14:54:22\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"37signals.com\",\n                \"title\":
+        \"Commercial freedom\",\n                \"url\": \"http://37signals.com/svn/posts/3324-commercial-freedom?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"It&#x2019;s easy to take for granted just how
+        good we have it as software makers selling on the internet. This is truly
+        a unique period in human history with unprecedented commercial freedom. It&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 378,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"f4p0iobk\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/f4p0iobk\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-11-16
+        08:48:08\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        893434,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-11-18 16:50:59\",\n            \"favorite\": false,\n            \"id\":
+        24629784,\n            \"date_archived\": \"2012-11-18 16:50:59\",\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"allthingsd.com\",\n
+        \               \"title\": \"Google Launches Ingress, a Worldwide Mobile Alternate
+        Reality Game\",\n                \"url\": \"http://allthingsd.com/20121115/google-launches-ingress-a-worldwide-mobile-alternate-reality-game/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://allthingsd.com/files/2012/11/ingress-PS-1024x500-640x312.png\",\n
+        \               \"author\": \"Liz Gannes\",\n                \"excerpt\":
+        \"What&#x2019;s the wackiest thing you can imagine Google launching? How about
+        a game to fight for control of the minds of everyone on earth? Or maybe that&#x2019;s
+        not so wacky. Meet Ingress, a new&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 599,\n                \"date_published\":
+        \"2012-11-15 00:00:00\",\n                \"dek\": null,\n                \"processed\":
+        true,\n                \"id\": \"tdl7b6mb\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/tdl7b6mb\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:48:07\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 16:54:09\",\n            \"favorite\":
+        false,\n            \"id\": 24629781,\n            \"date_archived\": \"2012-11-18
+        16:54:09\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"www.soundslice.com\",\n                \"title\":
+        \"Soundslice\",\n                \"url\": \"http://www.soundslice.com/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://media.soundslice.com/images2/homepage-screenshot.png\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Soundslice
+        Select demo All of Me Bistro Fada Honey Pie\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 179,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"rybsct2z\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/rybsct2z\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:48:06\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 16:53:53\",\n            \"favorite\":
+        false,\n            \"id\": 24629779,\n            \"date_archived\": \"2012-11-18
+        16:53:53\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"news.ycombinator.com\",\n                \"title\":
+        \"100,000 stars | Hacker News\",\n                \"url\": \"http://news.ycombinator.com/item?id=4784821\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"Hacker Newsnew | comments | ask | jobs | submitlogin\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 2153,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"fzycr0dy\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/fzycr0dy\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-11-16
+        08:48:06\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        893434,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-11-18 16:54:44\",\n            \"favorite\": false,\n            \"id\":
+        24629777,\n            \"date_archived\": \"2012-11-18 16:54:44\",\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"news.ycombinator.com\",\n
+        \               \"title\": \"Show HN: LaughMatch | Hacker News\",\n                \"url\":
+        \"http://news.ycombinator.com/item?id=4767794\",\n                \"lead_image_url\":
+        null,\n                \"author\": null,\n                \"excerpt\": \"Hacker
+        Newsnew | comments | ask | jobs | submitlogin\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 2119,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"bsgifb7f\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/bsgifb7f\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:48:05\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 16:56:28\",\n            \"favorite\":
+        false,\n            \"id\": 24629774,\n            \"date_archived\": \"2012-11-18
+        16:56:28\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"www.catonmat.net\",\n                \"title\":
+        \"My favorite regex of all time\",\n                \"url\": \"http://www.catonmat.net/blog/my-favorite-regex/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://www.catonmat.net/images/favorite-regex/ascii-table.png\",\n
+        \               \"author\": \"Tom Stoppard\",\n                \"excerpt\":
+        \"I thought I'd share my favorite regex of all time: [ -~] Any ideas what
+        this regexp matches? It matches all ASCII characters from the space to the
+        tilde. What are those characters? They're all&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 135,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"wffq7ejz\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/wffq7ejz\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:48:03\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 16:56:27\",\n            \"favorite\":
+        false,\n            \"id\": 24629773,\n            \"date_archived\": \"2012-11-18
+        16:56:27\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"news.ycombinator.com\",\n                \"title\":
+        \"Steven Sinofsky to Leave Microsoft | Hacker News\",\n                \"url\":
+        \"http://news.ycombinator.com/item?id=4775819\",\n                \"lead_image_url\":
+        null,\n                \"author\": null,\n                \"excerpt\": \"Hacker
+        Newsnew | comments | ask | jobs | submitlogin\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1886,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"jyfgxxab\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/jyfgxxab\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:48:02\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 16:57:21\",\n            \"favorite\":
+        false,\n            \"id\": 24629771,\n            \"date_archived\": \"2012-11-18
+        16:57:21\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"news.ycombinator.com\",\n                \"title\":
+        \"Bring Back the 40-hour work week (March 2012) | Hacker News\",\n                \"url\":
+        \"http://news.ycombinator.com/item?id=4779399\",\n                \"lead_image_url\":
+        null,\n                \"author\": null,\n                \"excerpt\": \"Software
+        is generally a winner-take-all market. Software has zero marginal cost, so
+        the company with the most revenue can invest the most upfront into making
+        a better product, giving it even more&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 484,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"ikdmpgw6\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/ikdmpgw6\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:48:01\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-18 16:56:37\",\n            \"favorite\":
+        false,\n            \"id\": 24629770,\n            \"date_archived\": \"2012-11-18
+        16:56:37\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"news.ycombinator.com\",\n                \"title\":
+        \"Ask HN: Why don't people talk specifics about money and salaries? | Hacker
+        News\",\n                \"url\": \"http://news.ycombinator.com/item?id=4767273&utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"At-will is far more complicated than most people
+        think.It gives them the right to terminate employment because of a business
+        event (plant closing, large-scale layoff for strategic reasons) without&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 630,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"aejbxt2m\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/aejbxt2m\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-11-16
+        08:48:01\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        893434,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-11-18 16:57:33\",\n            \"favorite\": false,\n            \"id\":
+        24629768,\n            \"date_archived\": \"2012-11-18 16:57:33\",\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"www.learndot.com\",\n
+        \               \"title\": \"How to name your startup: A 9 month first-hand
+        journey through rebranding.\",\n                \"url\": \"http://www.learndot.com/findings/how-to-name-your-startup/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://www.learndot.com/wp-content/uploads/2012/11/old-matygo-cards.jpg\",\n
+        \               \"author\": null,\n                \"excerpt\": \"This is
+        the story of how we rebranded Matygo to Learndot and the lessons learnt along
+        the way. Much of the advice is also applicable to new companies choosing a
+        name. If you just want the quick and&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 2625,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"eopmkioc\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/eopmkioc\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:47:59\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-16 08:47:59\",\n            \"favorite\":
+        false,\n            \"id\": 24629767,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"workshop.chromeexperiments.com\",\n                \"title\": \"100,000
+        Stars\",\n                \"url\": \"http://workshop.chromeexperiments.com/stars/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://workshop.chromeexperiments.com/stars/images/thumbnail.png\",\n
+        \               \"author\": null,\n                \"excerpt\": \"The Sun
+        is the star at the center of the Solar System. It is almost perfectly spherical
+        and consists of hot plasma interwoven with magnetic fields.[12]\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 102,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"qkwpywpt\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/qkwpywpt\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:47:59\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-16 08:47:56\",\n            \"favorite\":
+        false,\n            \"id\": 24629764,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"daltoncaldwell.com\",\n                \"title\": \"dalton\",\n                \"url\":
+        \"http://daltoncaldwell.com/understanding-likegate?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"Understanding Like-gate Several prominent people
+        are up in arms about Facebook charging for access to users who have already
+        Liked their page. I believe this debate is missing the big picture, and&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 930,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"iwxndscl\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/iwxndscl\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-11-16
+        08:47:56\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        893434,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-11-16 08:47:55\",\n            \"favorite\": false,\n            \"id\":
+        24629763,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"news.ycombinator.com\",\n
+        \               \"title\": \"Hacker News\",\n                \"url\": \"http://news.ycombinator.com/item?id=4769757\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"Hacker Newsnew | comments | ask | jobs | submitlogin\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 792,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"usnumz29\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/usnumz29\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-11-16
+        08:47:55\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        893434,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
+        \"2012-11-16 08:47:54\",\n            \"favorite\": false,\n            \"id\":
+        24629762,\n            \"date_archived\": null,\n            \"date_opened\":
+        null,\n            \"article\": {\n                \"domain\": \"www.weku.fm\",\n
+        \               \"title\": \"Why Coke Cost A Nickel For 70 Years\",\n                \"url\":
+        \"http://www.weku.fm/post/why-coke-cost-nickel-70-years?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://mediad.publicbroadcasting.net/p/shared/npr/201211/165162317.jpg\",\n
+        \               \"author\": \"NPR: David Kestenbaum\",\n                \"excerpt\":
+        \"Prices change; that's fundamental to how economies work. And yet: In 1886,
+        a bottle of Coke cost a nickel. It was also a nickel in 1900, 1915 and 1930.
+        In fact, 70 years after the first Coke was&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 586,\n                \"date_published\":
+        \"2012-11-15 04:04:00\",\n                \"dek\": null,\n                \"processed\":
+        true,\n                \"id\": \"xzhozjsh\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/xzhozjsh\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:47:54\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 893434,\n            \"read_percent\":
+        \"0.00\",\n            \"date_updated\": \"2012-11-16 08:47:53\",\n            \"favorite\":
+        false,\n            \"id\": 24629759,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"blog.anylistapp.com\",\n                \"title\": \"Rampant Abuse of Push
+        Notifications Is Ruining Them For All Developers\",\n                \"url\":
+        \"http://blog.anylistapp.com/2012/11/push-notifications/?utm_source=hackernewsletter&utm_medium=email\",\n
+        \               \"lead_image_url\": \"http://blog.anylistapp.com/assets/img/posts/key-ring-push.jpg\",\n
+        \               \"author\": null,\n                \"excerpt\": \"The abuse
+        of push notifications is spreading across the App Store. As a result, users
+        are starting to reflexively reject app requests to send push notifications.
+        I always allow apps to send me push&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 561,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"b4nz1wh8\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/b4nz1wh8\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-11-16 08:47:53\",\n            \"archive\":
+        false\n        }\n    ],\n    \"meta\": {\n        \"num_pages\": 2,\n        \"page\":
+        1,\n        \"item_count_total\": 23,\n        \"item_count\": 20\n    },\n
+        \   \"conditions\": {\n        \"opened_since\": null,\n        \"favorited_since\":
+        null,\n        \"domain\": \"\",\n        \"updated_until\": null,\n        \"exclude_accessibility\":
+        \"\",\n        \"archived_until\": null,\n        \"favorite\": null,\n        \"opened_until\":
+        null,\n        \"archived_since\": null,\n        \"added_until\": null,\n
+        \       \"updated_since\": null,\n        \"user\": \"<TOKENS>\",\n        \"per_page\":
+        20,\n        \"favorited_until\": null,\n        \"order\": \"-date_added\",\n
+        \       \"only_deleted\": null,\n        \"archive\": null,\n        \"added_since\":
+        null,\n        \"page\": 1\n    }\n}"
+    http_version:
+  recorded_at: Tue, 20 Nov 2012 00:49:29 GMT
+- request:
+    method: post
+    uri: https://www.readability.com/api/rest/v1/bookmarks
+    body:
+      encoding: US-ASCII
+      string: url=http%3A%2F%2Fdevans.us%2Fpublic%2Fpost%2F13%2Fthe-cost-of-the-war-on-drugs
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+  response:
+    status:
+      code: 409
+      message: CONFLICT
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 20 Nov 2012 00:49:30 GMT
+      Location:
+      - https://www.readability.com/api/rest/v1/bookmarks/24858023
+      P3p:
+      - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
+      Server:
+      - nginx/1.2.1
+      Set-Cookie:
+      - readabilityToken=VrCDnpxecfZdYMqfQkfdNZVXsTCeNgpWT77PEbJC; expires=Tue, 18-Dec-2012
+        00:49:30 GMT; Max-Age=2419200; Path=/
+      Vary:
+      - Authorization, Cookie
+      Content-Length:
+      - '118'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"redirect": true, "existing_bookmark": 24858023}, "messages":
+        ["Bookmark already exists."], "success": true}'
+    http_version:
+  recorded_at: Tue, 20 Nov 2012 00:49:30 GMT
+recorded_with: VCR 2.0.1
