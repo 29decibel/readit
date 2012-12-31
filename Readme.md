@@ -36,7 +36,7 @@ Readit::Config.consumer_secret = some_value
 ### API usage
 
 #### Initialize api client
-``` ruby 
+``` ruby
 
 @api = Readit::API.new 'access_token','access_token_secret'
 ```
@@ -70,9 +70,24 @@ bookmark_info = @api.bookmark(:url=>'http://some_article_url.html')
 # favorite a bookmark
 @api.favorite some_bookmark_id
 
-# or you can just call update_bookmark to 
+# or you can just call update_bookmark to
 # update a bookmark to favorited or archived
 @api.update_bookmark bookmark_id,:favorite => 1,:archive => 0
+```
+
+#### Tags
+```ruby
+# get all tags of current user
+@api.all_tags # [#<Hashie::Mash id=39086 text="rails">, #<Hashie::Mash id=39085 text="ruby">, #<Hashie::Mash id=39087 text="tag3">]
+
+# add tags to one bookmark
+@api.add_tags bookmark_id, "tag1,tag2,tag3"
+
+# fetch all tags of one bookmark
+@api.tags bookmark_id
+
+# remove tag from one bookmark
+@api.remove_tag bookmark_id, tag_id
 ```
 
 #### Get Article
