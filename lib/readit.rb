@@ -54,9 +54,9 @@ module Readit
       request(:get,'/')
     end
 
-    # Retrieve a single Article, including its content. 
+    # Retrieve a single Article, including its content.
     # api rest address: /articles/{article_id}
-    # @param article_id the article_id 
+    # @param article_id the article_id
     def article(article_id)
       request(:get,"/articles/#{article_id}")
     end
@@ -98,7 +98,7 @@ module Readit
       end
     end
 
-    # Add a bookmark. Returns 202 Accepted, meaning that the bookmark has been added but no guarantees are made as 
+    # Add a bookmark. Returns 202 Accepted, meaning that the bookmark has been added but no guarantees are made as
     # to whether the article proper has yet been parsed.
     # @param args args to bookmark a url
     # url the address to bookmark
@@ -141,11 +141,11 @@ module Readit
       update_bookmark(bookmark_id,:favorite=>1)
     end
 
-    # Remove a single bookmark from this user's history. 
+    # Remove a single bookmark from this user's history.
     # NOTE: THIS IS PROBABLY NOT WHAT YOU WANT. This is particularly for the case where a user accidentally bookmarks
-    # something they have no intention of reading or supporting. 
+    # something they have no intention of reading or supporting.
     # In almost all cases, you'll probably want to use archive by POSTing archive=1 to this bookmark.
-    # If you use DELETE and this months bookmarks have not yet been tallied, 
+    # If you use DELETE and this months bookmarks have not yet been tallied,
     # the site associated with this bookmark will not receive any contributions for this bookmark.
     # Use archive! It's better.
     # Returns a 204 on successful remove.
@@ -166,7 +166,31 @@ module Readit
       request(:get,"/users/_current")
     end
 
-    private 
+    # Retrieve all tags of current user
+    # api rest address :/tags
+    def all_tags
+      request(:get,"/tags")
+    end
+
+    # add tags to one bookmark
+    # api rest address POST :/bookmarks/{bookmark_id}/tags
+    def add_tags(bookmark_id, tags_string)
+      request(:post, "/bookmarks/#{bookmark_id}/tags",{ :tags => tags_string }).tags
+    end
+
+    # Retrieve all tags of one bookmark
+    # api rest address GET :/bookmarks/{bookmark_id}/tags
+    def tags(bookmark_id)
+      request(:get, "/bookmarks/#{bookmark_id}/tags").tags
+    end
+
+    # remove tag info from bookmark
+    # api rest address DELETE /bookmarks/{bookmark_id}/tags/{tag_id}
+    def remove_tag(bookmark_id, tag_id)
+      request(:delete, "/bookmarks/#{bookmark_id}/tags/#{tag_id}")
+    end
+
+    private
     def request(method,url,args={})
       consumer = ::OAuth::Consumer.new(Readit::Config.consumer_key,Readit::Config.consumer_secret,:site=>SITE_URL)
       atoken = ::OAuth::AccessToken.new(consumer, @access_token, @access_token_secret)

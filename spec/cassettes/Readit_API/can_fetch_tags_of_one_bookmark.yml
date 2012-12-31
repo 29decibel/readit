@@ -1,0 +1,427 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.readability.com/api/rest/v1/bookmarks?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="Uzdwcd6sXmrZUblQYtUfZxD3Bz8Qajn5dI9YooUwQ",
+        oauth_signature="Sv%2FjtkqOmgsz6NztFq9JVkiVeLI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1356984524", oauth_token="<TOKENS>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Dec 2012 20:08:49 GMT
+      P3p:
+      - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
+      Server:
+      - nginx/1.2.1
+      Set-Cookie:
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Mon, 28-Jan-2013
+        20:08:49 GMT; Max-Age=2419200; Path=/
+      Vary:
+      - Accept-Encoding
+      - Authorization, Cookie
+      Content-Length:
+      - '26010'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: ! "{\n    \"bookmarks\": [\n        {\n            \"user_id\": 24591,\n
+        \           \"read_percent\": \"0.00\",\n            \"tags\": [\n                {\n
+        \                   \"text\": \"rails\",\n                    \"id\": 39086\n
+        \               },\n                {\n                    \"text\": \"ruby\",\n
+        \                   \"id\": 39085\n                },\n                {\n
+        \                   \"text\": \"tag3\",\n                    \"id\": 39087\n
+        \               }\n            ],\n            \"date_updated\": \"2012-12-30
+        17:42:21\",\n            \"favorite\": false,\n            \"id\": 27888650,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"en.wikipedia.org\",\n
+        \               \"title\": \"Domain Name System\",\n                \"url\":
+        \"http://en.wikipedia.org/wiki/Domain_Name_System\",\n                \"lead_image_url\":
+        null,\n                \"author\": null,\n                \"excerpt\": \"The
+        Domain Name System ( DNS ) is a hierarchical naming system built on a distributed
+        database for computers, services, or any resource connected to the Internet
+        or a private network . Most&hellip;\",\n                \"direction\": \"ltr\",\n
+        \               \"word_count\": 6128,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"k425kyae\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/k425kyae\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-30 17:42:21\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-30
+        17:42:10\",\n            \"favorite\": false,\n            \"id\": 27888639,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"en.wikipedia.org\",\n
+        \               \"title\": \"Name server\",\n                \"url\": \"http://en.wikipedia.org/wiki/Name_server\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"In computing, a name server (also spelled nameserver)
+        is a program or computer server that implements a name-service protocol. It
+        maps a human-recognizable identifier to a system-internal, often&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 1099,\n
+        \               \"date_published\": \"2011-12-08 07:51:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"kfscjbua\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/kfscjbua\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-12-30
+        17:42:10\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"tags\": [],\n
+        \           \"date_updated\": \"2012-12-30 16:55:41\",\n            \"favorite\":
+        false,\n            \"id\": 27886587,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.sencha.com\",\n                \"title\": \"Blog\",\n                \"url\":
+        \"http://www.sencha.com/blog/understanding-hardware-acceleration-on-mobile-browsers/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"Written
+        by Ariya Hidayat Ariya is a passionate technologist and open-source advocate
+        with over a decade of experience dealing with different varieties of hardware
+        and software. These days his focus is mainly on web technologies. He is a
+        WebKit reviewer and has been contributing to WebKit in the last 3 years.Follow
+        Ariya on Twitter Related Posts HP TouchPad: The HTML5 Developer Scorecard
+        Rocking the Boat of Flash with CSS3 Animations A Web Developer’s Wishlist
+        for iOS 5 Share this post: Leave a r\",\n                \"excerpt\": \"Tweet
+        There has been a lot of mentions of the use of GPU (graphics processing unit)
+        hardware acceleration in smartphone and tablet web browsers. So far, the content
+        has been pretty general and hasn&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1352,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"3v4lcged\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/3v4lcged\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-30 16:55:41\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-29
+        21:56:59\",\n            \"favorite\": false,\n            \"id\": 27834804,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"mathbabe.org\",\n
+        \               \"title\": \"Open data is not a panacea\",\n                \"url\":
+        \"http://mathbabe.org/2012/12/29/open-data-is-not-a-panacea/\",\n                \"lead_image_url\":
+        \"http://0.gravatar.com/blavatar/c115a49b92e0fdcfbc20325ae39bb830?s=200\",\n
+        \               \"author\": \"Cathy O'Neil, mathbabe\",\n                \"excerpt\":
+        \"I&#x2019;ve talked a lot recently about how there&#x2019;s an information
+        war&#xA0;currently being waged on consumers by companies that troll the internet
+        and collect personal data, search histories,&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 465,\n                \"date_published\":
+        \"2012-12-29 00:00:00\",\n                \"dek\": null,\n                \"processed\":
+        true,\n                \"id\": \"qzuazhhe\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/qzuazhhe\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-29 21:56:59\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-28
+        18:44:29\",\n            \"favorite\": false,\n            \"id\": 27760391,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"www.scotthyoung.com\",\n
+        \               \"title\": \"Is Getting Rich Worth It?\",\n                \"url\":
+        \"http://www.scotthyoung.com/blog/2012/12/28/is-getting-rich-worth-it/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"The titular question was posed on Quora, and
+        one rich person, who claims to have made $15M after selling a tech startup
+        offers a surprisingly nuanced and insightful answer: &#x201C;Being rich is&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 1179,\n
+        \               \"date_published\": \"2012-12-28 00:00:00\",\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"yh2nhlhi\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/yh2nhlhi\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-12-28
+        18:44:29\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"tags\": [],\n
+        \           \"date_updated\": \"2012-12-28 16:46:59\",\n            \"favorite\":
+        false,\n            \"id\": 27752203,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.douban.com\",\n                \"title\": \"如果你去湾区/硅谷/旧金山，一定一定要去Napa
+        Valley\",\n                \"url\": \"http://www.douban.com/note/248370088/\",\n
+        \               \"lead_image_url\": \"http://img3.douban.com/view/note/large/public/p7389910.jpg\",\n
+        \               \"author\": null,\n                \"excerpt\": \"&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 33,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"fp0rvbub\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/fp0rvbub\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-12-28
+        16:46:26\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"tags\": [],\n
+        \           \"date_updated\": \"2012-12-28 16:45:39\",\n            \"favorite\":
+        false,\n            \"id\": 27752160,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.douban.com\",\n                \"title\": \"今年的阅读总结——怎么看更多书 怎么消化更多书\",\n
+        \               \"url\": \"http://www.douban.com/note/254404755/\",\n                \"lead_image_url\":
+        \"http://img3.douban.com/view/note/large/public/p7656808.jpg\",\n                \"author\":
+        null,\n                \"excerpt\": \"&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 8,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"0l6jgdct\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/0l6jgdct\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-28 16:45:39\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-27
+        16:43:38\",\n            \"favorite\": false,\n            \"id\": 27673987,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"blog.yxwang.me\",\n
+        \               \"title\": \"北美求职记（三）\",\n                \"url\": \"http://blog.yxwang.me/2012/12/job-hunting-in-usa-3/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"zellux\",\n
+        \               \"excerpt\": \"Hulu Hulu&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 257,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"pxlxm3eb\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/pxlxm3eb\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-27 16:43:38\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-27
+        16:43:34\",\n            \"favorite\": false,\n            \"id\": 27673981,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"blog.yxwang.me\",\n
+        \               \"title\": \"北美求职记（二）\",\n                \"url\": \"http://blog.yxwang.me/2012/12/job-hunting-in-usa-2/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": \"zellux\",\n
+        \               \"excerpt\": \"Google &#x9762;&#x8BD5;&#x4E5F;&#x662F;&#x6258;&#x5B66;&#x957F;&#x63A8;&#x8350;&#x4E86;&#x3002;HR&hellip;\",\n
+        \               \"direction\": \"rtl\",\n                \"word_count\": 272,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"hqylmukg\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/hqylmukg\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-12-27
+        16:43:34\",\n            \"archive\": false\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"tags\": [],\n
+        \           \"date_updated\": \"2012-12-27 16:43:27\",\n            \"favorite\":
+        false,\n            \"id\": 27673973,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"blog.yxwang.me\",\n                \"title\": \"北美求职记（一）\",\n                \"url\":
+        \"http://blog.yxwang.me/2012/12/job-hunting-in-usa-1/\",\n                \"lead_image_url\":
+        null,\n                \"author\": \"zellux\",\n                \"excerpt\":
+        \"&#x6700;&#x8FD1;&#x7B7E;&#x6389;&#x4E86;&hellip;\",\n                \"direction\":
+        \"rtl\",\n                \"word_count\": 118,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"bv3fotpe\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/bv3fotpe\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-27 16:43:27\",\n            \"archive\":
+        false\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-27
+        14:05:48\",\n            \"favorite\": false,\n            \"id\": 27665437,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"addyosmani.github.com\",\n
+        \               \"title\": \"Developing Backbone.js Applications -\",\n                \"url\":
+        \"http://addyosmani.github.com/backbone-fundamentals/\",\n                \"lead_image_url\":
+        \"http://addyosmani.github.com/backbone-fundamentals/img/7d4de12.png\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Developing
+        Backbone.js Applications By Addy Osmani @addyosmani Prelude Welcome to my
+        (in-progress) book about the Backbone.js framework for structuring JavaScript
+        applications. It's released under a&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 37778,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"vr06reup\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/vr06reup\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-27 14:05:48\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-27
+        00:44:27\",\n            \"favorite\": false,\n            \"id\": 27621111,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"archive.mensjournal.com\",\n
+        \               \"title\": \"Everything You Know About Fitness is a Lie | Men’s
+        Journal\",\n                \"url\": \"http://archive.mensjournal.com/everything-you-know-about-fitness-is-a-lie/\",\n
+        \               \"lead_image_url\": \"http://archive.mensjournal.com/wp-content/uploads/m199fitahome.jpg\",\n
+        \               \"author\": null,\n                \"excerpt\": \"Photograph
+        by Frederik Broden Gym machines are boring, CrossFit is sadistic, and dieting
+        sucks. Luckily, none of them is essential to being truly fit. Through years
+        of trial and error &#x2014; and&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 922,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"pvibxtqr\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/pvibxtqr\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-27 00:44:27\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-27
+        00:44:11\",\n            \"favorite\": false,\n            \"id\": 27621102,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"cs.gmu.edu\",\n
+        \               \"title\": \"Java Was Strongly Influenced by Objective-C\",\n
+        \               \"url\": \"http://cs.gmu.edu/~sean/stuff/java-objc.html\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"...and not C++... A while back, the following
+        posting was made by Patrick Naughton who, along with James Gosling, was responsible
+        for much of the design of . Objective-C is an object-oriented mutant&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 739,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"qzwz9dhn\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/qzwz9dhn\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-12-27
+        00:44:11\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"tags\": [],\n
+        \           \"date_updated\": \"2012-12-25 00:07:47\",\n            \"favorite\":
+        false,\n            \"id\": 27482918,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"jkff.info\",\n                \"title\": \"Incremental Regular Expressions¶\",\n
+        \               \"url\": \"http://jkff.info/articles/ire/\",\n                \"lead_image_url\":
+        \"http://jkff.info/articles/ire/_images/nfa.png\",\n                \"author\":
+        null,\n                \"excerpt\": \"By Eugene Kirpichov &lt;ekirpichov@gmail.com&gt;
+        Code available at github: http://github.com/jkff/ire This article was originally
+        published in the Russian functional programming journal&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 9313,\n                \"date_published\":
+        null,\n                \"dek\": null,\n                \"processed\": true,\n
+        \               \"id\": \"juryel0v\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/juryel0v\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-25 00:07:47\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-23
+        03:14:08\",\n            \"favorite\": false,\n            \"id\": 27365835,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"www.theverge.com\",\n
+        \               \"title\": \"A look inside Leap Motion, the 3D gesture control
+        that's like Kinect on steroids\",\n                \"url\": \"http://www.theverge.com/2012/6/26/3118592/leap-motion-gesture-controls\",\n
+        \               \"lead_image_url\": \"http://cdn1.sbnation.com/entry_photo_images/4476160/Still_for_article-hero_large_large.jpg\",\n
+        \               \"author\": \"David Pierce\",\n                \"excerpt\":
+        \"Leap Motion's not the household name Kinect is, but it should be &#x2014;
+        the company's motion-tracking system is more powerful, more accurate, smaller,
+        cheaper, and just more impressive. Leap CTO&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 638,\n                \"date_published\":
+        \"2012-06-26 15:02:00\",\n                \"dek\": null,\n                \"processed\":
+        true,\n                \"id\": \"3jgqmg40\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/3jgqmg40\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-23 03:14:08\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-23
+        03:13:30\",\n            \"favorite\": false,\n            \"id\": 27365811,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"www.technologyreview.com\",\n
+        \               \"title\": \"The Most Important New Technology Since the Smart
+        Phone Arrives December 2012\",\n                \"url\": \"http://www.technologyreview.com/view/428350/the-most-important-new-technology-since-the-smart-phone-arrives-december-2012/\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"By now, many of us are aware of the Leap Motion,
+        a small, $70 gesture control system that simply plugs into any computer and,
+        apparently, just works. If you&#x2019;ve seen the gesture interfaces in&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 427,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"cne7eoqd\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/cne7eoqd\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-12-23
+        03:13:30\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"tags\": [],\n
+        \           \"date_updated\": \"2012-12-23 01:21:39\",\n            \"favorite\":
+        false,\n            \"id\": 27361360,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"www.nytimes.com\",\n                \"title\": \"Giving Mom’s Book Five
+        Stars? Amazon May Cull Your Review\",\n                \"url\": \"http://www.nytimes.com/2012/12/23/technology/amazon-book-reviews-deleted-in-a-purge-aimed-at-manipulation.html?_r=0\",\n
+        \               \"lead_image_url\": \"http://graphics8.nytimes.com/images/2012/12/23/business/sub-AMAZON-1/sub-AMAZON-1-superJumbo.jpg\",\n
+        \               \"author\": \"DAVID STREITFELD\",\n                \"excerpt\":
+        \"Giving raves to family members is no longer acceptable. Neither is writers’
+        reviewing other writers. But showering five stars on a book you admittedly
+        have not read is fine. After several&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 1271,\n                \"date_published\":
+        \"2012-12-22 00:00:00\",\n                \"dek\": null,\n                \"processed\":
+        true,\n                \"id\": \"di46302f\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/di46302f\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-23 01:21:39\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-23
+        01:21:25\",\n            \"favorite\": false,\n            \"id\": 27361353,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"www.theatlantic.com\",\n
+        \               \"title\": \"Why Workers Are Losing the War Against Machines\",\n
+        \               \"url\": \"http://www.theatlantic.com/business/archive/2011/10/why-workers-are-losing-the-war-against-machines/247278/?single_page=true\",\n
+        \               \"lead_image_url\": \"http://cdn.theatlantic.com/static/mt/assets/business/330%20robot%20reuters%201.jpg\",\n
+        \               \"author\": \"Erik Brynjolfsson and Andrew McAfee\",\n                \"excerpt\":
+        \"In the 21st century war of man vs. machine in the workplace, what if man
+        isn't supposed to prevail?At least since the followers of Ned Ludd smashed
+        mechanized looms in 1811, workers have worried&hellip;\",\n                \"direction\":
+        \"ltr\",\n                \"word_count\": 3013,\n                \"date_published\":
+        \"2011-10-26 09:09:00\",\n                \"dek\": null,\n                \"processed\":
+        true,\n                \"id\": \"nilujdtv\"\n            },\n            \"article_href\":
+        \"/api/rest/v1/articles/nilujdtv\",\n            \"date_favorited\": null,\n
+        \           \"date_added\": \"2012-12-23 01:21:25\",\n            \"archive\":
+        true\n        },\n        {\n            \"user_id\": 24591,\n            \"read_percent\":
+        \"0.00\",\n            \"tags\": [],\n            \"date_updated\": \"2012-12-23
+        01:20:12\",\n            \"favorite\": false,\n            \"id\": 27361298,\n
+        \           \"date_archived\": null,\n            \"date_opened\": null,\n
+        \           \"article\": {\n                \"domain\": \"jmlite.tumblr.com\",\n
+        \               \"title\": \"Developer CEO vs Sales Guy CEO\",\n                \"url\":
+        \"http://jmlite.tumblr.com/post/38548502524/developer-ceo-vs-sales-guy-ceo\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"I am a sales guy CEO. One quick look at my
+        LinkedIn profile shows direct sales and partner sales and business development
+        and marketing and sales management. The developers I work with tell me I am&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 445,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"z32y2c1w\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/z32y2c1w\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-12-23
+        01:20:12\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
+        24591,\n            \"read_percent\": \"0.00\",\n            \"tags\": [],\n
+        \           \"date_updated\": \"2012-12-23 01:16:30\",\n            \"favorite\":
+        false,\n            \"id\": 27361172,\n            \"date_archived\": null,\n
+        \           \"date_opened\": null,\n            \"article\": {\n                \"domain\":
+        \"blog.chriszacharias.com\",\n                \"title\": \"czacharias\",\n
+        \               \"url\": \"http://blog.chriszacharias.com/page-weight-matters\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"Three years ago, while I was a web developer
+        at YouTube, one of the senior engineers began a rant about the page weight
+        of the video watch page being far too large. The page had ballooned to as
+        high&hellip;\",\n                \"direction\": \"ltr\",\n                \"word_count\":
+        620,\n                \"date_published\": null,\n                \"dek\":
+        null,\n                \"processed\": true,\n                \"id\": \"ialjwot0\"\n
+        \           },\n            \"article_href\": \"/api/rest/v1/articles/ialjwot0\",\n
+        \           \"date_favorited\": null,\n            \"date_added\": \"2012-12-23
+        01:16:30\",\n            \"archive\": true\n        }\n    ],\n    \"meta\":
+        {\n        \"num_pages\": 111,\n        \"page\": 1,\n        \"item_count_total\":
+        2209,\n        \"item_count\": 20\n    },\n    \"conditions\": {\n        \"opened_since\":
+        null,\n        \"added_until\": null,\n        \"domain\": \"\",\n        \"updated_until\":
+        null,\n        \"tags\": [],\n        \"archive\": null,\n        \"archived_until\":
+        null,\n        \"favorite\": null,\n        \"opened_until\": null,\n        \"archived_since\":
+        null,\n        \"favorited_since\": null,\n        \"updated_since\": null,\n
+        \       \"exclude_accessibility\": \"\",\n        \"per_page\": 20,\n        \"favorited_until\":
+        null,\n        \"order\": \"-date_added\",\n        \"only_deleted\": null,\n
+        \       \"page\": 1,\n        \"added_since\": null,\n        \"user\": \"<TOKENS>\"\n
+        \   }\n}"
+    http_version: !!null 
+  recorded_at: Mon, 31 Dec 2012 20:08:45 GMT
+- request:
+    method: get
+    uri: https://www.readability.com/api/rest/v1/bookmarks/27888650/tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="x0A0TkiTxVNRsD7D2U6sdRtve6JJLXuOtdtScVbB8",
+        oauth_signature="YotBkh2LtMb4kODgNC1zE28Ynxc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1356984525", oauth_token="<TOKENS>", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 31 Dec 2012 20:08:50 GMT
+      P3p:
+      - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
+      Server:
+      - nginx/1.2.1
+      Set-Cookie:
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Mon, 28-Jan-2013
+        20:08:50 GMT; Max-Age=2419200; Path=/
+      Vary:
+      - Accept-Encoding
+      - Authorization, Cookie
+      Content-Length:
+      - '242'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! "{\n    \"tags\": [\n        {\n            \"text\": \"rails\",\n
+        \           \"id\": 39086\n        },\n        {\n            \"text\": \"ruby\",\n
+        \           \"id\": 39085\n        },\n        {\n            \"text\": \"tag3\",\n
+        \           \"id\": 39087\n        }\n    ]\n}"
+    http_version: !!null 
+  recorded_at: Mon, 31 Dec 2012 20:08:46 GMT
+recorded_with: VCR 2.0.1
