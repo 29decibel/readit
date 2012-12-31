@@ -11,7 +11,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.configure_rspec_metadata!
 
-  tokens = YAML.load_file(File.join(File.dirname(__FILE__),'../readability.yml'))["development"]
+  tokens = YAML.load_file(File.join(File.dirname(__FILE__),'./readability.yml'))["development"]
   tokens.values.each do |sv|
     c.filter_sensitive_data('<TOKENS>') { sv }
   end

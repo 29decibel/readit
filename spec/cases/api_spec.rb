@@ -4,7 +4,7 @@ require 'time'
 describe "Readit::API",:vcr do
   before do
     # load consumer infos
-    tokens = YAML.load_file(File.join(File.dirname(__FILE__),'../../readability.yml'))["development"]
+    tokens = YAML.load_file(File.join(File.dirname(__FILE__),'../readability.yml'))["development"]
     Readit::Config.consumer_key = tokens['consumer_key']
     Readit::Config.consumer_secret = tokens['consumer_secret']
     @api = Readit::API.new tokens['oauth_token'],tokens['oauth_token_secret']
