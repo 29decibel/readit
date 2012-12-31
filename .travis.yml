@@ -9,4 +9,4 @@ rvm:
 before_script:
   - "cp spec/readability.yml.sample spec/readability.yml"
   - "cp features/readability.yml.sample features/readability.yml"
-script: "bundle exec spec"
+script: "bundle exec rspec"
