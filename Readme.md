@@ -1,4 +1,4 @@
-## Simple api client of [Readability](readability.com) [![Build Status](https://travis-ci.org/29decibel/readit.png)](https://travis-ci.org/29decibel/readit)  [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/29decibel/readit)
+## Simple api client of [Readability](http://readability.com) [![Build Status](https://travis-ci.org/29decibel/readit.png)](https://travis-ci.org/29decibel/readit)  [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/29decibel/readit)
 
 ### Installation
 ```ruby
