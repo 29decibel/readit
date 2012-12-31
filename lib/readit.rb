@@ -114,7 +114,7 @@ module Readit
       request(:post,'/bookmarks',args) do |response|
         Hashie::Mash.new({
           :status =>response.code,
-          :bookmark_id=> response.code == '202' ? response["Location"].match(/bookmarks\/(.*)/)[1] : '',
+          :bookmark_id=> ['202', '409'].include?(response.code) ? response["Location"].match(/bookmarks\/(.*)/)[1] : '',
           :article_id=> response.code== '202' ? response["X-Article-Location"].match(/articles\/(.*)/)[1] : ''})
       end
     end

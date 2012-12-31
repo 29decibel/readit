@@ -84,6 +84,9 @@ describe "Readit::API",:vcr do
     lambda { @api.bookmark }.should raise_error
   end
 
+  it "should provide the bookmark_id of an already bookmarked url" do
+    @api.bookmark(:url => @api.bookmarks.first.article.url).bookmark_id.should_not be_empty
+  end
 
 end
 
