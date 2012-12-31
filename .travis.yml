@@ -1,0 +1,12 @@
+before_install:
+  - gem install bundler
+branches:
+  only:
+    - 'master'
+rvm:
+  - 1.9.2
+  - 1.9.3
+before_script:
+  - "cp spec/readability.yml.sample spec/readability.yml"
+  - "cp features/readability.yml.sample features/readability.yml"
+script: "bundle exec spec"
