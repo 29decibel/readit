@@ -1,54 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Readit by 29decibel</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>Readit by 29decibel</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Readit</h1>
-        <p>a simple api client for readability</p>
-        <p class="view"><a href="https://github.com/29decibel/readit">View the Project on GitHub <small>29decibel/readit</small></a></p>
-        <ul>
-          <li><a href="https://github.com/29decibel/readit/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/29decibel/readit/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/29decibel/readit">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h2>Simple api client of <a href="http://www.readability.com">readability</a>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Readit</h1>
+          <h2>a simple api client for readability</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/29decibel/readit/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/29decibel/readit/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/29decibel/readit" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h2>Simple api client of <a href="http://readability.com">Readability</a>
 </h2>
 
 <h3>Installation</h3>
 
-<div class="highlight">
-<pre>
+<div class="highlight"><pre>
 <span class="n">gem</span> <span class="n">install</span> <span class="n">readit</span>
-</pre>
-</div>
-
+</pre></div>
 
 <p>or in your rails gemfile</p>
 
-<div class="highlight">
-<pre>
+<div class="highlight"><pre>
 <span class="n">gem</span> <span class="s1">'readit'</span>
 <span class="c1"># or latest (recommend)</span>
 <span class="n">gem</span> <span class="s1">'readit'</span><span class="p">,</span><span class="ss">:git</span><span class="o">=&gt;</span><span class="s1">'git@github.com:29decibel/readit.git'</span>
-</pre>
-</div>
-
+</pre></div>
 
 <h3>Configuration</h3>
 
@@ -56,49 +54,36 @@
 
 <p>config/readability.yml</p>
 
-<div class="highlight">
-<pre>
+<div class="highlight"><pre>
 <span class="n">development</span><span class="p">:</span>
   <span class="n">consumer_key</span><span class="p">:</span> <span class="n">some_key</span>
   <span class="n">consumer_secret</span><span class="p">:</span> <span class="n">some_secret</span>
-</pre>
-</div>
-
+</pre></div>
 
 <p>or in your code</p>
 
-<div class="highlight">
-<pre>
+<div class="highlight"><pre>
 <span class="no">Readit</span><span class="o">::</span><span class="no">Config</span><span class="o">.</span><span class="n">consumer_key</span> <span class="o">=</span> <span class="n">some_key</span>
 <span class="no">Readit</span><span class="o">::</span><span class="no">Config</span><span class="o">.</span><span class="n">consumer_secret</span> <span class="o">=</span> <span class="n">some_value</span>
-</pre>
-</div>
-
+</pre></div>
 
 <h3>API usage</h3>
 
 <h4>Initialize api client</h4>
 
-<div class="highlight">
-<pre>
+<div class="highlight"><pre>
 <span class="vi">@api</span> <span class="o">=</span> <span class="no">Readit</span><span class="o">::</span><span class="no">API</span><span class="o">.</span><span class="n">new</span> <span class="s1">'access_token'</span><span class="p">,</span><span class="s1">'access_token_secret'</span>
-</pre>
-</div>
-
+</pre></div>
 
 <h4>User info</h4>
 
-<div class="highlight">
-<pre><span class="c1"># get user info</span>
+<div class="highlight"><pre><span class="c1"># get user info</span>
 <span class="vi">@api</span><span class="o">.</span><span class="n">me</span>
-</pre>
-</div>
-
+</pre></div>
 
 <h4>Bookmarks</h4>
 
-<div class="highlight">
-<pre><span class="c1"># get all bookmarks, result will be a hash array</span>
+<div class="highlight"><pre><span class="c1"># get all bookmarks, result will be a hash array</span>
 <span class="vi">@api</span><span class="o">.</span><span class="n">bookmarks</span>
 <span class="c1"># get bookmarks along with meta info :</span>
 <span class="c1"># item_count, item_count_total, num_pages, page</span>
@@ -119,36 +104,46 @@
 <span class="c1"># favorite a bookmark</span>
 <span class="vi">@api</span><span class="o">.</span><span class="n">favorite</span> <span class="n">some_bookmark_id</span>
 
-<span class="c1"># or you can just call update_bookmark to </span>
+<span class="c1"># or you can just call update_bookmark to</span>
 <span class="c1"># update a bookmark to favorited or archived</span>
 <span class="vi">@api</span><span class="o">.</span><span class="n">update_bookmark</span> <span class="n">bookmark_id</span><span class="p">,</span><span class="ss">:favorite</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span><span class="ss">:archive</span> <span class="o">=&gt;</span> <span class="mi">0</span>
-</pre>
-</div>
+</pre></div>
 
+<h4>Tags</h4>
+
+<div class="highlight"><pre><span class="c1"># get all tags of current user</span>
+<span class="vi">@api</span><span class="o">.</span><span class="n">all_tags</span> <span class="c1"># [#&lt;Hashie::Mash id=39086 text="rails"&gt;, #&lt;Hashie::Mash id=39085 text="ruby"&gt;, #&lt;Hashie::Mash id=39087 text="tag3"&gt;]</span>
+
+<span class="c1"># add tags to one bookmark</span>
+<span class="vi">@api</span><span class="o">.</span><span class="n">add_tags</span> <span class="n">bookmark_id</span><span class="p">,</span> <span class="s2">"tag1,tag2,tag3"</span>
+
+<span class="c1"># fetch all tags of one bookmark</span>
+<span class="vi">@api</span><span class="o">.</span><span class="n">tags</span> <span class="n">bookmark_id</span>
+
+<span class="c1"># remove tag from one bookmark</span>
+<span class="vi">@api</span><span class="o">.</span><span class="n">remove_tag</span> <span class="n">bookmark_id</span><span class="p">,</span> <span class="n">tag_id</span>
+</pre></div>
 
 <h4>Get Article</h4>
 
-<div class="highlight">
-<pre><span class="c1"># get one artile by article_id</span>
+<div class="highlight"><pre><span class="c1"># get one artile by article_id</span>
 <span class="vi">@api</span><span class="o">.</span><span class="n">article</span> <span class="s1">'article_id'</span>
 
-</pre>
-</div>
-
+</pre></div>
 
 <h3>At last but not least</h3>
 
 <blockquote>
 <p>Contributions are welcome!</p>
 </blockquote>
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/29decibel">29decibel</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
-              <script type="text/javascript">
+        </section>
+
+        <footer>
+          Readit is maintained by <a href="https://github.com/29decibel">29decibel</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -159,5 +154,7 @@
             } catch(err) {}
           </script>
 
+      </div>
+    </div>
   </body>
 </html>
