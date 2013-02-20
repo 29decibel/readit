@@ -23,6 +23,7 @@ config/readability.yml
 development:
   consumer_key: some_key
   consumer_secret: some_secret
+  parser_token: some_parser_token
 ```
 
 or in your code
@@ -31,6 +32,7 @@ or in your code
 
 Readit::Config.consumer_key = some_key
 Readit::Config.consumer_secret = some_value
+Readit::Config.parser_token = some_parser_token
 ```
 
 ### API usage
