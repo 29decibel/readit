@@ -92,17 +92,20 @@ bookmark_info = @api.bookmark(:url=>'http://some_article_url.html')
 @api.remove_tag bookmark_id, tag_id
 ```
 
-### Parser
-```ruby
-@parser = Readit::Parser.new "some_parser_token"
-@parser.parse some_url
-```
-
 #### Get Article
 ```ruby
 # get one artile by article_id
 @api.article 'article_id'
 
+```
+
+### Parser
+```ruby
+# create a parser client
+@parser = Readit::Parser.new "some_parser_token"
+# parse one url
+@parser.parse some_url
+# now you will get a object with title, content, etc.
 ```
 
 ### At last but not least
