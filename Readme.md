@@ -23,6 +23,7 @@ config/readability.yml
 development:
   consumer_key: some_key
   consumer_secret: some_secret
+  parser_token: some_parser_token
 ```
 
 or in your code
@@ -31,6 +32,7 @@ or in your code
 
 Readit::Config.consumer_key = some_key
 Readit::Config.consumer_secret = some_value
+Readit::Config.parser_token = some_parser_token
 ```
 
 ### API usage
@@ -90,17 +92,20 @@ bookmark_info = @api.bookmark(:url=>'http://some_article_url.html')
 @api.remove_tag bookmark_id, tag_id
 ```
 
-### Parser
-```ruby
-@parser = Readit::Parser.new "some_parser_token"
-@parser.parse some_url
-```
-
 #### Get Article
 ```ruby
 # get one artile by article_id
 @api.article 'article_id'
 
+```
+
+### Parser
+```ruby
+# create a parser client
+@parser = Readit::Parser.new "some_parser_token"
+# parse one url
+@parser.parse some_url
+# now you will get a object with title, content, etc.
 ```
 
 ### At last but not least
