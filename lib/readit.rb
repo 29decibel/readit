@@ -3,10 +3,13 @@ require 'multi_json'
 require 'oauth'
 require 'uri'
 require 'hashie'
+require 'net/http'
 # plugin railtie hook when using rails
 require 'readit/railtie' if defined?(Rails)
 
 module Readit
+
+  SITE_URL = 'https://www.readability.com/'
 
   class ReaditError < StandardError;end
 
@@ -28,6 +31,34 @@ module Readit
       @@consumer_secret = val
     end
 
+    def self.parser_token
+      @@parser_token
+    end
+
+    def self.parser_token=(val)
+      @@parser_token = val
+    end
+
+  end
+
+  class Parser
+    def initialize(parser_token = Readit::Config.parser_token)
+      @parser_token = parser_token
+      raise ReaditError.new('please set parser token before use') unless @parser_token
+    end
+
+    def parse(url)
+      uri = URI.parse("#{SITE_URL}api/content/v1/parser?token=#{@parser_token}&url=#{URI.escape(url)}")
+      http = Net::HTTP.new(uri.host, uri.port)
+      # using https
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      # create request
+      request = Net::HTTP::Get.new(uri.request_uri)
+      response = http.request(request)
+
+      Hashie::Mash.new MultiJson.decode(response.body)
+    end
   end
 
   class API
@@ -46,8 +77,6 @@ module Readit
     end
 
     attr_reader :access_token
-
-    SITE_URL = 'https://www.readability.com/'
 
     # Retrieve the base API URI - information about subresources.
     def resource_info
