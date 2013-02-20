@@ -15,6 +15,10 @@ VCR.configure do |c|
   tokens.values.each do |sv|
     c.filter_sensitive_data('<TOKENS>') { sv }
   end
+  c.default_cassette_options = {
+    :match_requests_on => [:method,
+      VCR.request_matchers.uri_without_param(:token)]
+  }
 end
 
 RSpec.configure do |c|

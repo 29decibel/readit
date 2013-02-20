@@ -19,11 +19,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 20 Feb 2013 02:23:00 GMT
+      - Wed, 20 Feb 2013 04:49:23 GMT
       P3p:
       - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
       Server:
-      - nginx/1.2.6
+      - nginx/1.2.1
       Vary:
       - Accept-Encoding
       - Authorization, Cookie
@@ -634,5 +634,5 @@ http_interactions:
         IExhbmd3b3J0aOKAmXMgVGhpbmdzIG9mIFZhcmlhYmxlIEludGVyZXN0IiwK
         ICAgICJyZW5kZXJlZF9wYWdlcyI6IDEKfQ==
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 02:23:04 GMT
+  recorded_at: Wed, 20 Feb 2013 04:49:27 GMT
 recorded_with: VCR 2.0.1

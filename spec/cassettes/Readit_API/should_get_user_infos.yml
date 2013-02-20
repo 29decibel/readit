@@ -10,11 +10,11 @@ http_interactions:
       Accept:
       - ! '*/*'
       User-Agent:
-      - OAuth gem v0.4.5
+      - OAuth gem v0.4.7
       Authorization:
-      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="qgUGt7rPMrCVMx00cnEMrjR7cZNJppA5etEWuY1aPyY",
-        oauth_signature="6t6ohQEiDBokbqryvD3nII0vfwc%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1334276905", oauth_token="<TOKENS>", oauth_version="1.0"
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="tQCL0nlVlUxp2s80VWKSkdkYDvWyA8akd2gDy5oFVDw",
+        oauth_signature="YqpcqxWHMOI%2BFDUHDv6ar2JHnvs%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1361335754", oauth_token="<TOKENS>", oauth_version="1.0"
   response:
     status:
       code: 200
@@ -23,27 +23,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 13 Apr 2012 00:28:27 GMT
+      - Wed, 20 Feb 2013 04:49:11 GMT
       P3p:
       - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
       Server:
-      - nginx/0.7.65
+      - nginx/1.2.1
       Set-Cookie:
-      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Fri, 11-May-2012
-        00:28:27 GMT; Max-Age=2419200; Path=/
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Wed, 20-Mar-2013
+        04:49:11 GMT; Max-Age=2419200; Path=/
       Vary:
-      - Authorization,Cookie
+      - Accept-Encoding
+      - Authorization, Cookie
       Content-Length:
-      - '388'
+      - '398'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! "{\n    \"username\": \"<TOKENS>\",\n    \"first_name\": \"dongbin\",\n
-        \   \"last_name\": \"li\",\n    \"has_active_subscription\": false,\n    \"favorites_limit\":
-        0,\n    \"is_publisher\": false,\n    \"reading_limit\": 0,\n    \"avatar_url\":
-        \"https://secure.gravatar.com/avatar/6fee9190161d257e7008059878ede591?d=https://www.readability.com/media/images/avatar.png&s=36\",\n
-        \   \"date_joined\": \"2011-11-17 09:31:53\"\n}"
-    http_version: !!null 
-  recorded_at: Fri, 13 Apr 2012 00:28:27 GMT
+      string: ! "{\n    \"username\": \"<TOKENS>\",\n    \"first_name\": \"Dongbin\",\n
+        \   \"last_name\": \"Li\",\n    \"has_active_subscription\": false,\n    \"avatar_url\":
+        \"https://graph.facebook.com/699166556/picture?height=128&width=128\",\n    \"is_publisher\":
+        false,\n    \"email_into_address\": \"<TOKENS>+wilde@inbox.readability.com\",\n
+        \   \"kindle_email_address\": \"mike.d.1984@kindle.com\",\n    \"date_joined\":
+        \"2011-11-17 09:31:53\"\n}"
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:49:15 GMT
 recorded_with: VCR 2.0.1

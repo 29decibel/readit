@@ -5,20 +5,20 @@ http_interactions:
     uri: https://www.readability.com/api/rest/v1/bookmarks
     body:
       encoding: US-ASCII
-      string: url=http%3a%2f%2fwww.jslib.org.cn%2fnjlib_xsyj%2f201011%2ft20101130_98154.htm
+      string: url=http%3A%2F%2Fwww.jslib.org.cn%2Fnjlib_xsyj%2F201011%2Ft20101130_98154.htm
     headers:
       Accept:
       - ! '*/*'
       User-Agent:
-      - OAuth gem v0.4.5
+      - OAuth gem v0.4.7
       Content-Length:
       - '0'
       Content-Type:
       - application/x-www-form-urlencoded
       Authorization:
-      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="9i2xHN9HJl8sNXqVI20YDPnQ0iAR0BFzddUYbXlEvE",
-        oauth_signature="UwZnXEFVOjOCgiSX2ghOgnEmcWM%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1334276911", oauth_token="<TOKENS>", oauth_version="1.0"
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="xJHXiSuhXbqkEu49fK5v0woxOQH4rWazwYxcHB7ocbY",
+        oauth_signature="8j%2FJ3nxvQQ3s%2BKe4fMv%2Ft0s3r58%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1361335757", oauth_token="<TOKENS>", oauth_version="1.0"
   response:
     status:
       code: 409
@@ -27,18 +27,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 13 Apr 2012 00:28:33 GMT
+      - Wed, 20 Feb 2013 04:49:14 GMT
       Location:
       - https://www.readability.com/api/rest/v1/bookmarks/3644001
       P3p:
       - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
       Server:
-      - nginx/0.7.65
+      - nginx/1.2.1
       Set-Cookie:
-      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Fri, 11-May-2012
-        00:28:33 GMT; Max-Age=2419200; Path=/
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Wed, 20-Mar-2013
+        04:49:14 GMT; Max-Age=2419200; Path=/
       Vary:
-      - Authorization,Cookie
+      - Authorization, Cookie
       Content-Length:
       - '117'
       Connection:
@@ -47,6 +47,6 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"meta": {"redirect": true, "existing_bookmark": 3644001}, "messages":
         ["Bookmark already exists."], "success": true}'
-    http_version: !!null 
-  recorded_at: Fri, 13 Apr 2012 00:28:33 GMT
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:49:18 GMT
 recorded_with: VCR 2.0.1

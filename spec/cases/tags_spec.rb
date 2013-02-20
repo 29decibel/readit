@@ -25,7 +25,7 @@ describe "Readit::API",:vcr do
 
   it "can add tags to one bookmark" do
     bookmark_id = bookmark_ids.first
-    tags = @api.add_tags bookmark_id, "ruby,rails,tag3"
+    tags = @api.add_tags bookmark_id, "book,movie,music"
     tags.count.should == 3
   end
 
