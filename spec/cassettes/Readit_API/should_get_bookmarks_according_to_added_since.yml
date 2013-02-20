@@ -10,11 +10,11 @@ http_interactions:
       Accept:
       - ! '*/*'
       User-Agent:
-      - OAuth gem v0.4.5
+      - OAuth gem v0.4.7
       Authorization:
-      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="zsIiLBiBFgZzccMR5H4sfhCgPzAkVZXOZGBiAQQiC0",
-        oauth_signature="gc2airVR4ys7OgAHWemDSSdX8oA%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1334276921", oauth_token="<TOKENS>", oauth_version="1.0"
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="Xc8HCVOzxhpz8sgPCUVDer3spA2TLJy4FMBQcDIcolI",
+        oauth_signature="cX%2FCeK0pYubEOv07oH0333F7%2BKM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1361335761", oauth_token="<TOKENS>", oauth_version="1.0"
   response:
     status:
       code: 200
@@ -23,60 +23,64 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 13 Apr 2012 00:28:43 GMT
+      - Wed, 20 Feb 2013 04:49:17 GMT
       P3p:
       - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
       Server:
-      - nginx/0.7.65
+      - nginx/1.2.1
       Set-Cookie:
-      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Fri, 11-May-2012
-        00:28:43 GMT; Max-Age=2419200; Path=/
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Wed, 20-Mar-2013
+        04:49:17 GMT; Max-Age=2419200; Path=/
       Vary:
-      - Authorization,Cookie
+      - Accept-Encoding
+      - Authorization, Cookie
       Content-Length:
-      - '2862'
+      - '3068'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
       string: ! "{\n    \"bookmarks\": [\n        {\n            \"user_id\": 24591,\n
-        \           \"read_percent\": \"0.00\",\n            \"date_updated\": \"2012-01-16
-        21:48:53\",\n            \"favorite\": false,\n            \"id\": 1836432,\n
-        \           \"date_archived\": \"2012-01-16 21:48:53\",\n            \"date_opened\":
+        \           \"read_percent\": \"0.00\",\n            \"tags\": [],\n            \"date_updated\":
+        \"2012-01-16 21:48:53\",\n            \"favorite\": false,\n            \"id\":
+        1836432,\n            \"date_archived\": \"2012-01-16 21:48:53\",\n            \"date_opened\":
         null,\n            \"article\": {\n                \"domain\": \"www.everpix.com\",\n
         \               \"title\": \"Everpix\",\n                \"url\": \"https://www.everpix.com/#year=2010\",\n
-        \               \"author\": null,\n                \"excerpt\": \"From Aug
-        22, 4:38 PM to Jun 10, 8:05 PM\",\n                \"direction\": \"ltr\",\n
-        \               \"word_count\": 506,\n                \"date_published\":
-        null,\n                \"processed\": true,\n                \"id\": \"uunhk2gr\"\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"From Aug 22, 4:38 PM to Jun 10, 8:05 PM\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 506,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"uunhk2gr\"\n
         \           },\n            \"article_href\": \"/api/rest/v1/articles/uunhk2gr\",\n
         \           \"date_favorited\": null,\n            \"date_added\": \"2011-12-30
         21:43:48\",\n            \"archive\": true\n        },\n        {\n            \"user_id\":
-        24591,\n            \"read_percent\": \"0.00\",\n            \"date_updated\":
-        \"2012-01-16 21:48:58\",\n            \"favorite\": false,\n            \"id\":
-        1834877,\n            \"date_archived\": \"2012-01-16 21:48:58\",\n            \"date_opened\":
-        null,\n            \"article\": {\n                \"domain\": \"hangar.runway7.net\",\n
-        \               \"title\": \"The Javascript Guide to Objects, Functions, Closures
-        and Scope\",\n                \"url\": \"http://hangar.runway7.net/javascript-guide-to-objects-functions-scope-prototpyes-closures\",\n
-        \               \"author\": null,\n                \"excerpt\": \"Dec 26,
-        2011 Throughout my time writing Javascript code, I've come to realize that
-        while I love the language to bits, it is a little difficult to understand.
-        A lot of people have attributed this to&hellip;\",\n                \"direction\":
-        \"ltr\",\n                \"word_count\": 1941,\n                \"date_published\":
-        null,\n                \"processed\": true,\n                \"id\": \"obhnzmjt\"\n
+        24591,\n            \"read_percent\": \"0.00\",\n            \"tags\": [],\n
+        \           \"date_updated\": \"2012-01-16 21:48:58\",\n            \"favorite\":
+        false,\n            \"id\": 1834877,\n            \"date_archived\": \"2012-01-16
+        21:48:58\",\n            \"date_opened\": null,\n            \"article\":
+        {\n                \"domain\": \"hangar.runway7.net\",\n                \"title\":
+        \"The Javascript Guide to Objects, Functions, Closures and Scope\",\n                \"url\":
+        \"http://hangar.runway7.net/javascript-guide-to-objects-functions-scope-prototpyes-closures\",\n
+        \               \"lead_image_url\": null,\n                \"author\": null,\n
+        \               \"excerpt\": \"Dec 26, 2011 Throughout my time writing Javascript
+        code, I've come to realize that while I love the language to bits, it is a
+        little difficult to understand. A lot of people have attributed this to&hellip;\",\n
+        \               \"direction\": \"ltr\",\n                \"word_count\": 1941,\n
+        \               \"date_published\": null,\n                \"dek\": null,\n
+        \               \"processed\": true,\n                \"id\": \"obhnzmjt\"\n
         \           },\n            \"article_href\": \"/api/rest/v1/articles/obhnzmjt\",\n
         \           \"date_favorited\": null,\n            \"date_added\": \"2011-12-30
         19:24:44\",\n            \"archive\": true\n        }\n    ],\n    \"meta\":
         {\n        \"num_pages\": 28,\n        \"page\": 1,\n        \"item_count_total\":
         55,\n        \"item_count\": 2\n    },\n    \"conditions\": {\n        \"opened_since\":
-        null,\n        \"favorited_since\": null,\n        \"domain\": \"\",\n        \"updated_until\":
-        null,\n        \"exclude_accessibility\": \"\",\n        \"archived_until\":
-        null,\n        \"favorite\": null,\n        \"opened_until\": null,\n        \"archived_since\":
-        null,\n        \"added_until\": \"2012-01-01 00:00:00\",\n        \"updated_since\":
-        null,\n        \"user\": \"<TOKENS>\",\n        \"per_page\": 2,\n        \"favorited_until\":
-        null,\n        \"order\": \"-date_added\",\n        \"only_deleted\": null,\n
-        \       \"archive\": null,\n        \"added_since\": null,\n        \"page\":
-        1\n    }\n}"
-    http_version: !!null 
-  recorded_at: Fri, 13 Apr 2012 00:28:43 GMT
+        null,\n        \"added_until\": \"2012-01-01 00:00:00\",\n        \"domain\":
+        \"\",\n        \"updated_until\": null,\n        \"tags\": [],\n        \"archive\":
+        null,\n        \"archived_until\": null,\n        \"favorite\": null,\n        \"opened_until\":
+        null,\n        \"archived_since\": null,\n        \"favorited_since\": null,\n
+        \       \"updated_since\": null,\n        \"exclude_accessibility\": \"\",\n
+        \       \"per_page\": 2,\n        \"favorited_until\": null,\n        \"order\":
+        \"-date_added\",\n        \"only_deleted\": null,\n        \"page\": 1,\n
+        \       \"added_since\": null,\n        \"user\": \"<TOKENS>\"\n    }\n}"
+    http_version: 
+  recorded_at: Wed, 20 Feb 2013 04:49:21 GMT
 recorded_with: VCR 2.0.1
