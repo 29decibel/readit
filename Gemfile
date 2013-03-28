@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 gem 'multi_json'
 
 group :development, :test do
-  gem 'rspec'
+  gem 'rspec', ">= 2.12.0"
   # Testing infrastructure
   gem 'guard'
   gem 'guard-rspec'

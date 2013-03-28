@@ -12,9 +12,9 @@ http_interactions:
       User-Agent:
       - OAuth gem v0.4.7
       Authorization:
-      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="Xc8HCVOzxhpz8sgPCUVDer3spA2TLJy4FMBQcDIcolI",
-        oauth_signature="cX%2FCeK0pYubEOv07oH0333F7%2BKM%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1361335761", oauth_token="<TOKENS>", oauth_version="1.0"
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="HKb3ilXEBX89NMBiHD8VKvh0Ca8CpwP3hPcsSPjRA",
+        oauth_signature="n1B2lwoZD2L4WfqgDQI%2BmoraCNs%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1364436341", oauth_token="<TOKENS>", oauth_version="1.0"
   response:
     status:
       code: 200
@@ -23,14 +23,14 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 20 Feb 2013 04:49:17 GMT
+      - Thu, 28 Mar 2013 02:05:42 GMT
       P3p:
       - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
       Server:
-      - nginx/1.2.1
+      - nginx/1.2.6
       Set-Cookie:
-      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Wed, 20-Mar-2013
-        04:49:17 GMT; Max-Age=2419200; Path=/
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Thu, 25-Apr-2013
+        02:05:42 GMT; Max-Age=2419200; Path=/
       Vary:
       - Accept-Encoding
       - Authorization, Cookie
@@ -82,5 +82,5 @@ http_interactions:
         \"-date_added\",\n        \"only_deleted\": null,\n        \"page\": 1,\n
         \       \"added_since\": null,\n        \"user\": \"<TOKENS>\"\n    }\n}"
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:49:21 GMT
+  recorded_at: Thu, 28 Mar 2013 02:05:45 GMT
 recorded_with: VCR 2.0.1

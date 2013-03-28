@@ -12,9 +12,9 @@ http_interactions:
       User-Agent:
       - OAuth gem v0.4.7
       Authorization:
-      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="tQCL0nlVlUxp2s80VWKSkdkYDvWyA8akd2gDy5oFVDw",
-        oauth_signature="YqpcqxWHMOI%2BFDUHDv6ar2JHnvs%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1361335754", oauth_token="<TOKENS>", oauth_version="1.0"
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="Ivx5HUYkD8onpyFQTjl5e8WSAV6eTaQ3LmF0KLfJ30",
+        oauth_signature="TOJUNZbs%2FXR26A9T87JC2EOjbz0%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1364436323", oauth_token="<TOKENS>", oauth_version="1.0"
   response:
     status:
       code: 200
@@ -23,29 +23,33 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 20 Feb 2013 04:49:11 GMT
+      - Thu, 28 Mar 2013 02:05:23 GMT
       P3p:
       - CP='Legacy Only. Go to https://readability.com/about/terms/ for full terms.'
       Server:
-      - nginx/1.2.1
+      - nginx/1.2.6
       Set-Cookie:
-      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Wed, 20-Mar-2013
-        04:49:11 GMT; Max-Age=2419200; Path=/
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Thu, 25-Apr-2013
+        02:05:23 GMT; Max-Age=2419200; Path=/
       Vary:
       - Accept-Encoding
       - Authorization, Cookie
       Content-Length:
-      - '398'
+      - '770'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
       string: ! "{\n    \"username\": \"<TOKENS>\",\n    \"first_name\": \"Dongbin\",\n
-        \   \"last_name\": \"Li\",\n    \"has_active_subscription\": false,\n    \"avatar_url\":
-        \"https://graph.facebook.com/699166556/picture?height=128&width=128\",\n    \"is_publisher\":
-        false,\n    \"email_into_address\": \"<TOKENS>+wilde@inbox.readability.com\",\n
-        \   \"kindle_email_address\": \"mike.d.1984@kindle.com\",\n    \"date_joined\":
-        \"2011-11-17 09:31:53\"\n}"
+        \   \"last_name\": \"Li\",\n    \"has_active_subscription\": false,\n    \"tags\":
+        [\n        {\n            \"text\": \"movie\",\n            \"applied_count\":
+        1,\n            \"id\": 65634,\n            \"bookmark_ids\": [\n                31620185\n
+        \           ]\n        },\n        {\n            \"text\": \"music\",\n            \"applied_count\":
+        1,\n            \"id\": 65636,\n            \"bookmark_ids\": [\n                31620185\n
+        \           ]\n        }\n    ],\n    \"is_publisher\": false,\n    \"email_into_address\":
+        \"<TOKENS>+wilde@inbox.readability.com\",\n    \"kindle_email_address\": \"mike.d.1984@kindle.com\",\n
+        \   \"avatar_url\": \"https://graph.facebook.com/699166556/picture?height=128&width=128\",\n
+        \   \"date_joined\": \"2011-11-17 09:31:53\"\n}"
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:49:15 GMT
+  recorded_at: Thu, 28 Mar 2013 02:05:24 GMT
 recorded_with: VCR 2.0.1

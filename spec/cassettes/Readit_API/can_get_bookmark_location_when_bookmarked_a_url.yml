@@ -16,18 +16,18 @@ http_interactions:
       Content-Type:
       - application/x-www-form-urlencoded
       Authorization:
-      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="xJHXiSuhXbqkEu49fK5v0woxOQH4rWazwYxcHB7ocbY",
-        oauth_signature="8j%2FJ3nxvQQ3s%2BKe4fMv%2Ft0s3r58%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1361335757", oauth_token="<TOKENS>", oauth_version="1.0"
+      - OAuth oauth_consumer_key="<TOKENS>", oauth_nonce="Uz2hqtPE7iPvxuc3etcQADR40vlkYdwtPo1pWsS2u0",
+        oauth_signature="SCAQpu2YpClVRMGaUz55zGjTFcU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1364436332", oauth_token="<TOKENS>", oauth_version="1.0"
   response:
     status:
       code: 409
       message: CONFLICT
     headers:
       Content-Type:
-      - application/json
+      - text/plain
       Date:
-      - Wed, 20 Feb 2013 04:49:14 GMT
+      - Thu, 28 Mar 2013 02:05:33 GMT
       Location:
       - https://www.readability.com/api/rest/v1/bookmarks/3644001
       P3p:
@@ -35,18 +35,19 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Set-Cookie:
-      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Wed, 20-Mar-2013
-        04:49:14 GMT; Max-Age=2419200; Path=/
+      - readabilityToken=4FCRyvwJt8enJ7LvesTWKphGwNRyT5h9B3t5KWfP; expires=Thu, 25-Apr-2013
+        02:05:33 GMT; Max-Age=2419200; Path=/
       Vary:
       - Authorization, Cookie
+      X-Article-Location:
+      - /api/rest/v1/articles/o6y1aydi
       Content-Length:
-      - '117'
+      - '0'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"meta": {"redirect": true, "existing_bookmark": 3644001}, "messages":
-        ["Bookmark already exists."], "success": true}'
+      string: ''
     http_version: 
-  recorded_at: Wed, 20 Feb 2013 04:49:18 GMT
+  recorded_at: Thu, 28 Mar 2013 02:05:34 GMT
 recorded_with: VCR 2.0.1
