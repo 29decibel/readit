@@ -9,7 +9,7 @@ require 'readit/railtie' if defined?(Rails)
 
 module Readit
 
-  SITE_URL = 'https://www.readability.com/'
+  SITE_URL = 'www.readability.com/'
 
   class ReaditError < StandardError;end
 
@@ -42,17 +42,35 @@ module Readit
   end
 
   class Parser
+    CONTENT_API_PATH = "api/content/v1/"
+
     def initialize(parser_token = Readit::Config.parser_token)
       @parser_token = parser_token
       raise ReaditError.new('please set parser token before use') unless @parser_token
     end
 
     def parse(url)
-      uri = URI.parse("#{SITE_URL}api/content/v1/parser?token=#{@parser_token}&url=#{URI.escape(url)}")
+      https_request("https://#{SITE_URL}#{CONTENT_API_PATH}parser?token=#{@parser_token}&url=#{URI.escape(url)}")
+    end
+
+    # Detect the confidence with which Readability could parse a given URL. Does not require a token.
+    # /confidence?url&callback
+    def confidence(url, callback=nil)
+      callabck_para = callback ? "&callback=#{callback}" : ""
+      https_request("http://#{SITE_URL}#{CONTENT_API_PATH}confidence?url=#{URI.escape(url)}#{callabck_para}", false)
+    end
+
+    private
+    def https_request(url, ssl=true)
+      uri = URI.parse(url)
       http = Net::HTTP.new(uri.host, uri.port)
-      # using https
-      http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+      if ssl
+        # using https
+        http.use_ssl = true
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      end
+
       # create request
       request = Net::HTTP::Get.new(uri.request_uri)
       response = http.request(request)
@@ -60,6 +78,7 @@ module Readit
       Hashie::Mash.new MultiJson.decode(response.body)
     end
   end
+
 
   class API
     # initializer if creating a new Readit API client
@@ -219,9 +238,10 @@ module Readit
       request(:delete, "/bookmarks/#{bookmark_id}/tags/#{tag_id}")
     end
 
+
     private
     def request(method,url,args={})
-      consumer = ::OAuth::Consumer.new(Readit::Config.consumer_key,Readit::Config.consumer_secret,:site=>SITE_URL)
+      consumer = ::OAuth::Consumer.new(Readit::Config.consumer_key,Readit::Config.consumer_secret,:site=>"https://#{SITE_URL}")
       atoken = ::OAuth::AccessToken.new(consumer, @access_token, @access_token_secret)
       #response = client.send(method,"/api/rest/v1#{url}",args.merge!('oauth_token'=>@access_token,'oauth_token_secret'=>'5VEnMNPr7Q4393wxAYdnTWnpWwn7bHm4','oauth_consumer_key'=>'lidongbin','oauth_consumer_secret'=>'gvjSYqH4PLWQtQG8Ywk7wKZnEgd4xf2C'))
       response = atoken.send(method,"/api/rest/v1#{url}",args)
