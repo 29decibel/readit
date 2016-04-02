@@ -108,6 +108,9 @@ bookmark_info = @api.bookmark(:url=>'http://some_article_url.html')
 # now you will get a object with title, content, etc.
 ```
 
+## Donation
+Buy me a [Kindle book](https://amzn.com/w/27RM84VK3GHRL) :book:
+
 ### At last but not least
 >Contributions are welcome!
 
